@@ -73,4 +73,3 @@ Please ensure your code follows the existing code style and includes appropriate
 
 # Acknowledgments
 The sniptech App is a server side app that uses the Nextjs  and Flask web framework.
-
