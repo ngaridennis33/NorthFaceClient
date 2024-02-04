@@ -106,7 +106,7 @@ const Register = () => {
 
           <div className={styles.login}>
             <span className={styles.text}>Already have an account?</span>
-              <Link href="/Login" className="text-link">Sign In</Link>
+              <Link href="/login" className="text-link">Sign In</Link>
           </div>
           </div>
     

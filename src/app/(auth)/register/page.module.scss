@@ -1,0 +1,97 @@
+@import "../../../styles/button.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/animation.scss";
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px;
+    width: 400px;
+
+    .header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        .logo{
+            font-weight: 600;
+            font-size: 30px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+            color:#4b5563;
+        }
+    }
+
+    .form{
+        width: 100%;
+    }
+
+    .responseMessage{
+        color: $color-crimson;
+        font-weight: bold;
+    }
+
+    .bottom{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .login{
+            display: flex;
+            gap: 10px;
+
+            .text{
+                color:$color-grey-dark;
+            }
+        }
+
+        .orCont{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .hr{
+                width: 100%;
+                height: 5px;
+                border: 0;
+                border-top: 1px solid $color-grey;
+            }
+    
+            .orText{
+                font-size: 14px;
+                color: $color-grey-dark;
+                border-radius: 50%;
+                border:1px solid $color-grey;
+                padding: 5px;
+            }
+        }
+    
+        .socialLogin{
+            border: .1rem solid $color-grey;
+            outline: none;
+            padding: 16px 40px;
+            width: 100%;
+            min-height: 50px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-grey-dark;
+            gap: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+            
+            
+            &:hover{
+                transform: scale(1.03);
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+@import "../../../styles/button.scss";
+@import "../../../styles/animation.scss";
+
+.container{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 50vh;
+    gap: 20px;
+    width: 400px;
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+
+
+        .heading{
+            font-weight: 600;
+            font-size: 30px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+            color:#4b5563;
+        }
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 10px;
+        width: 100%;
+
+        .inputLabel{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .errorMessage{
+            width: 400px;
+            font-size: 12px;
+            padding: 3px;
+            color: $color-red;
+            display: none;
+        }
+
+        .input{
+            background-color: inherit;
+            cursor: pointer;
+            width: 100%;
+            border:none;
+            outline: none;
+            display: flex;
+            padding: 15px;
+            margin: 5px 0;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid $color-grey-dark;
+
+            &::placeholder{
+                color: $color-grey-dark;
+            }
+
+
+            &:focus{
+                border: 1px solid $color-blue;
+            }
+
+            &:invalid ~ .errorMessage{
+                display: block;
+            }
+
+            &:invalid[list = "true"]{
+                border-color: $color-crimson;
+            }
+
+            &:not(:placeholder-shown,:focus):invalid {
+                border-color: $color-crimson;
+                -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            }
+
+        }  
+        .messageError{
+            color: red;
+        }
+    }
+.bottom{
+    .span{
+        .link{
+            color: $color-blue;
+        }
+    }
+}
+}
