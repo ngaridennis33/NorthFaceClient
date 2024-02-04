@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+.utilsBtn{
+    padding: 16px 40px;
+    cursor: pointer;
+    border: none;
+    color: $color-white;
+    border-radius: 1.5rem;
+    width: max-content;
+    font-size: 14px;
+    transition: .3s ease;
+    &:disabled{
+        opacity: .8;
+        cursor: not-allowed;
+    }
+    
+&:hover{
+        transform: scale(.98);  
+    }
+}
+
+.ctaBtn{
+    @extend .utilsBtn;
+    background-color: $color-black;
+    font-weight: bold;
+    &:disabled{
+        background-color: $color-grey
+    }
+}
+
+.actionBtn{
+    @extend .utilsBtn;
+    background-color: transparent;
+    color: #000;
+    text-decoration: underline;
+}
