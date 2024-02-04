@@ -1,0 +1,116 @@
+.nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .navList {
+        list-style: none;
+        font-size: 16px;
+        font-weight: 500;
+        height: 100%;
+        transition: 3s ease;
+
+        .navListItem {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid transparent;
+            transition: .3s ease;
+            &:hover {
+                color: grey;
+                border-bottom: 2px solid red;
+
+                .dropDown {
+                visibility: visible;
+                }
+            }
+        
+            .navListItemLink{
+                cursor: pointer;
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .dropDown {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 999;
+            width: 100%;
+            height:40vh;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            }
+
+            .imageContainer{
+                flex: 1;
+                height: 70%;
+                width: 100%;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .image{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                .imgText{
+                    color: #fff;
+                    padding: 10px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 30px;
+                    font-weight: bold;
+                    background: linear-gradient(to bottom, rgba(93, 92, 92, 0.156), rgba(29, 48, 190, 0.9));
+                }
+            }
+        
+            .dropdownList {
+            flex: 1;
+            list-style: none;
+            color: #000;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            height: 100%;
+            flex-wrap: wrap;
+            
+            .dropDownListItems {
+                font-size: 18px;
+                font-weight: bold;
+                
+                .dropDownListItem{
+                    list-style: none;
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: rgb(62, 62, 62);
+                }
+                .dropDownListItemLabel{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #000;
+                }
+                .dropDownListItemList{
+                    margin-left: 10px;
+                }
+            }
+            }
+        }
+        }
+

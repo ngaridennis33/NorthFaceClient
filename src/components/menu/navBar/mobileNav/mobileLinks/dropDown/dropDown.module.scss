@@ -1,0 +1,41 @@
+.dropdownContainer{
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F8F8F8;
+}
+
+.treeItemContainer{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.navMenuItem{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(57, 56, 56);
+    font-size: 16px;
+    font-weight: 300;
+}
+.navMenuItem:hover{
+    opacity: .9;
+}
+
+
+.treeChildContainer{
+margin-top: 10px;
+padding-left: 10px;
+border-radius: 5px;
+}
+
+.dropdownLabel{
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

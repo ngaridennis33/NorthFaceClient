@@ -1,0 +1,86 @@
+@import "../../../styles/responsive.scss";
+
+
+.container{
+
+    .topNav{
+        @include respond(laptop){
+            display: none;
+        }
+    }
+
+    .box{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family:helvetica-neue-lt, sans-serif;
+
+        @include respond(laptop){
+                height: 100px;
+            }
+        .deskTopwrapper{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            @include respond(laptop){
+                display: none;
+            }
+
+            .logo{
+                width: 10%;
+            }
+            .desktopLinks{
+                width: 70%;
+                height: 100%;
+
+            }
+            
+            .search{
+                width:15%;
+
+            }
+            .cart{
+                width: 5%;
+                cursor: pointer;
+            }
+        }
+
+        .mobileViewWrapper{
+            display: none;
+            @include respond(laptop){
+                display: flex;
+                padding: 0 20px;
+                width: 100%;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+
+                .right{
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                }
+
+                .mobileLinks{
+                    position: absolute;
+                    z-index: 1000;
+                    background-color: #fff;
+                    left: 0;
+                    top: 100px;
+                    width: 100%;
+                    transition: .15s ease-in;
+                }
+
+            }
+
+        }
+        
+    }
+}
