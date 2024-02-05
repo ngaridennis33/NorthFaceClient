@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const ForgorPassword = () => {
-    const router = useRouter();
+    // const router = useRouter();
 
     const [email, setEmail] = useState("");
 
