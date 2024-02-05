@@ -1,7 +1,7 @@
 "use client"
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./page.module.scss";
-import { useSearchParams } from 'next/navigation'
+// import { useSearchParams } from 'next/navigation'
 import { useRouter } from "next/navigation";
 
 interface ResetPasswordValues {
@@ -36,7 +36,6 @@ const ResetPassword = () => {
         {
             id: 1,
             name: "password",
-            // type: "password",
             placeholder: "Password",
             errormessage: "⁕ Password should have a Minimum eight characters, at least one letter, one number, and one special character",
             label: "Password",
@@ -46,7 +45,6 @@ const ResetPassword = () => {
         {
             id:2,
             name:"passwordConfirm",
-            // type:"password",
             placeholder:"Confirm Password",
             errormessage:"⁕ Passwords DO NOT match!",
             label:"ConfirmPassword",

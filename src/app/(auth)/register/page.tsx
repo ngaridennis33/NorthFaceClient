@@ -1,9 +1,9 @@
 "use client"
+import React, { useState } from "react";
 import styles from "./page.module.scss";
 import FormInput from '@/components/RegisterFormInput/FormInput';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from "react";
 
 interface FormInputValues{
   name:string;
