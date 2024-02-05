@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FocusEvent } from 'react';
+import React, { useState, ChangeEvent, FocusEvent } from 'react';
 import styles from "./formInput.module.scss";
 
 interface FormInputProps {

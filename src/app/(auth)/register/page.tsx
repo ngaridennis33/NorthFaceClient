@@ -3,7 +3,7 @@ import styles from "./page.module.scss";
 import FormInput from '@/components/RegisterFormInput/FormInput';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from "react";
+import React, { useState } from "react";
 
 interface FormInputValues{
   name:string;
