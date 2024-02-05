@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./modal.module.scss";
-import { useClickOutside } from "../hooks/Hooks";
+// import { useClickOutside } from "../hooks/Hooks";
 import { ModalContext } from "../context/ModalContext";
 
 
@@ -17,13 +17,10 @@ const Modal: React.FC<ModalProps> = ({ children }) => {
   }
 
   const { closeModal, domNodeClick } = modalContext;
-  const domNode = useClickOutside(() => {
-    domNodeClick();
-  });
 
   return (
     <div className={styles.modalOverlay}>
-      <div className={styles.modalWrapper} ref={domNode as React.MutableRefObject<HTMLDivElement>}>
+      <div className={styles.modalWrapper}>
         <div className={styles.modal}>
           <span onClick={closeModal} className={styles.close}>
             &times;
