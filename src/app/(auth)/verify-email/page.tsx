@@ -4,8 +4,9 @@ import Link from "next/link"
 import styles from "./page.module.scss"
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from "next/navigation";
+import { Suspense } from "react";
 
-const VerifyEmail= () => {
+const VerifyEmailContent= () => {
 
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -46,6 +47,15 @@ const VerifyEmail= () => {
 
         </div>
     )
-}
+};
+
+const VerifyEmail = () => {
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <VerifyEmailContent />
+      </Suspense>
+    );
+  };
+
 
 export default VerifyEmail
