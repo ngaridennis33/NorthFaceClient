@@ -2,11 +2,12 @@ import React, { Fragment, useState, ReactNode } from 'react';
 import Link from 'next/link';
 import styles from "./dropDown.module.scss";
 import { OpenDropdown } from '../../hamburger/Hamburger';
+import { NavBarDataMobileItem } from '@/components/menu/navData';
 
 interface TreeItemProps {
   label: string;
   children?: ReactNode;
-  link?: string;
+  link?: string | null;
   handleHamburgerClose: () => void;
 }
 
@@ -39,18 +40,18 @@ const TreeItem: React.FC<TreeItemProps> = ({ label, children, link, handleHambur
 };
 
 interface DropdownProps {
-  tree: { label: string; link?: string; branches?: any[] }[];
-  handleHamburgerClose: () => void;
-}
-
-const Dropdown: React.FC<DropdownProps> = ({ tree, handleHamburgerClose }) => {
-  const createTree = (branch: { label: string; link?: string; branches?: any[] }) => (
-    <TreeItem key={branch.label} label={branch.label} link={branch.link} handleHamburgerClose={handleHamburgerClose}>
-      {branch?.branches?.map((branch) => createTree(branch))}
-    </TreeItem>
-  );
-
-  return <div className={styles.dropdownContainer}>{tree.map((branch) => createTree(branch))}</div>;
-};
+    tree: NavBarDataMobileItem[];
+    handleHamburgerClose: () => void;
+  }
+  
+  const Dropdown: React.FC<DropdownProps> = ({ tree, handleHamburgerClose }) => {
+    const createTree = (branch: NavBarDataMobileItem) => (
+      <TreeItem key={branch.label} label={branch.label} link={branch.link} handleHamburgerClose={handleHamburgerClose}>
+        {branch?.tree?.map((subBranch) => createTree(subBranch))}
+      </TreeItem>
+    );
+  
+    return <div className={styles.dropdownContainer}>{tree.map((branch) => createTree(branch))}</div>;
+  };
 
 export default Dropdown;

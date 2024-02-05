@@ -306,8 +306,16 @@ export const CategoriesData = [
 
 
 
-// NavLinks for the NavBar
-export const NavBarDataMobile = [
+// NavLinks for the Mobile NavBar
+export interface NavBarDataMobileItem {
+    label: string;
+    link?: string | null;
+    img?: string | null;
+    tree?: NavBarDataMobileItem[] | null;
+    branches?: NavBarDataMobileItem[] | null;
+}
+
+export const NavBarDataMobile:NavBarDataMobileItem[] = [
     {
     label:"Black Friday Sale", 
     link:null, 

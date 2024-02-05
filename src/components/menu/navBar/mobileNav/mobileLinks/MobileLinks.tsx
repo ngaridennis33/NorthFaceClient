@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Dropdown from './dropDown/Dropdown';
 import Link from 'next/link';
 import { OpenDropdown } from '../hamburger/Hamburger';
-import { NavBarDataMobile } from '@/components/menu/navData';
+import { NavBarDataMobile, NavBarDataMobileItem } from '@/components/menu/navData';
 import styles from "./mobileLinks.module.scss";
 
 interface MobileProps {
@@ -19,7 +19,7 @@ const Mobile: React.FC<MobileProps> = ({ handleHamburgerClose }) => {
 
   return (
     <>
-      {NavBarDataMobile.map(({ link, label, tree }, index) => {
+      {NavBarDataMobile.map(({ link, label, tree }:NavBarDataMobileItem, index) => {
         const isopen = openDropDown === label;
 
         return (
@@ -32,7 +32,7 @@ const Mobile: React.FC<MobileProps> = ({ handleHamburgerClose }) => {
                 </div>
               </div>
             )}
-            {isopen && (<Dropdown handleHamburgerClose={handleHamburgerClose} tree={tree} />)}
+            {isopen && (<Dropdown handleHamburgerClose={handleHamburgerClose} tree={tree || []}/>)}
           </ul>
         );
       })}
