@@ -1,35 +1,38 @@
-"use client"
 import React, { useContext } from "react";
 import styles from "./modal.module.scss";
+import { useClickOutside } from "../hooks/Hooks";
 import { ModalContext } from "../context/ModalContext";
-import { useClickOutside } from "../hooks/hooks";
 
 
-const Modal = ({children}) => {
+interface ModalProps {
+  children: React.ReactNode;
+}
 
+const Modal: React.FC<ModalProps> = ({ children }) => {
+  const modalContext = useContext(ModalContext);
 
-// Toogle the modal open or close when the user clicks on the Donate button.
-    const {closeModal,domNodeClick} = useContext(ModalContext);
-    console.log(closeModal)
+  if (!modalContext) {
+    // Handle the case where the context is not provided.
+    return null;
+  }
 
-//Toggle Modal open or close when user clicks outside the Modal.
-    let domNode = useClickOutside(()=>{
+  const { closeModal, domNodeClick } = modalContext;
+  const domNode = useClickOutside(() => {
     domNodeClick();
-    })
+  });
 
-return(
-        <div className={styles.modalOverlay}>
-            <div className={styles.modalWrapper} ref={domNode}>
-                <div className={styles.modal}>
-                        <span onClick={closeModal} className={styles.close}>
-                        &times;
-                        </span>
-                    <div className={styles.modalBody}>{children}</div>
-                </div>
-            </div>
+  return (
+    <div className={styles.modalOverlay}>
+      <div className={styles.modalWrapper} ref={domNode as React.MutableRefObject<HTMLDivElement>}>
+        <div className={styles.modal}>
+          <span onClick={closeModal} className={styles.close}>
+            &times;
+          </span>
+          <div className={styles.modalBody}>{children}</div>
         </div>
-)
-
+      </div>
+    </div>
+  );
 };
 
-export default Modal
+export default Modal;

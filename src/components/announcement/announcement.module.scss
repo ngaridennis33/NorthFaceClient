@@ -1,0 +1,27 @@
+.container{
+    background: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .text{
+            width: 98%;
+            color: #fff;
+        }
+
+        .close{
+            width: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+}
