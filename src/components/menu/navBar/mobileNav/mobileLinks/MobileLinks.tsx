@@ -1,35 +1,43 @@
-import React, { useContext, useState } from 'react'
-import styles from "./mobileLinks.module.scss"
-import Dropdown from './dropDown/Dropdown'
-import Link from 'next/link'
-import {NavBarDataMobile } from '../../../navLinksData'
-import { OpenDropdown } from '../hamburger/Hamburger'
+import React, { useState } from 'react';
+import Dropdown from './dropDown/Dropdown';
+import Link from 'next/link';
+import { OpenDropdown } from '../hamburger/Hamburger';
+import { NavBarDataMobile } from '@/components/menu/navData';
+import styles from "./mobileLinks.module.scss";
 
-const Mobile = ({handleHamburgerClose}) => {
+interface MobileProps {
+  handleHamburgerClose: () => void;
+}
 
-    const [openDropDown, setOpenDropDown] = useState(null)
-    const openDropDownHandler = (label)=>{
-        if(label === openDropDown) return setOpenDropDown(null);
-        setOpenDropDown(label)
-    }
+const Mobile: React.FC<MobileProps> = ({ handleHamburgerClose }) => {
+  const [openDropDown, setOpenDropDown] = useState<string | null>(null);
 
-    return (
+  const openDropDownHandler = (label: string) => {
+    if (label === openDropDown) return setOpenDropDown(null);
+    setOpenDropDown(label);
+  };
+
+  return (
     <>
-        {NavBarDataMobile.map(({link, label,tree},index) => {
+      {NavBarDataMobile.map(({ link, label, tree }, index) => {
         const isopen = openDropDown === label;
-        
-            return(
-            <ul className={styles.navMenu} key = {index}>
-            {link && <li className={styles.navMenuItem}><Link onClick={handleHamburgerClose} href={link}>{label}</Link></li>}
-            {!link && (<div className={styles.dropdownContainer} onClick={() => openDropDownHandler(label)}>
-                <div className={styles.dropdownLabel} dataisopen={isopen.toString()}><span>{label}</span> <OpenDropdown/> </div>
-            </div>)}
-            {isopen && (<Dropdown handleHamburgerClose = {handleHamburgerClose} tree = {tree}/>)}
-            </ul>
-        );
-        })}
-    </>
-    )
-    }
 
-export default Mobile
+        return (
+          <ul className={styles.navMenu} key={index}>
+            {link && <li className={styles.navMenuItem}><Link onClick={handleHamburgerClose} href={link}>{label}</Link></li>}
+            {!link && (
+              <div className={styles.dropdownContainer} onClick={() => openDropDownHandler(label)}>
+                <div className={styles.dropdownLabel} data-isopen = {isopen.toString()}>
+                  <span>{label}</span> <OpenDropdown />
+                </div>
+              </div>
+            )}
+            {isopen && (<Dropdown handleHamburgerClose={handleHamburgerClose} tree={tree} />)}
+          </ul>
+        );
+      })}
+    </>
+  );
+}
+
+export default Mobile;

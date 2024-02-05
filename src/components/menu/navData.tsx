@@ -36,7 +36,7 @@ export const TopNavData = [
     },
     {
         label: "Sign In",
-        link: "/Login",
+        link: "/login",
     },
 ];
 
@@ -528,12 +528,3 @@ export const NavBarDataMobile = [
     tree:null,
     },
 ];
-
-
-
-
-
-
-
-
-

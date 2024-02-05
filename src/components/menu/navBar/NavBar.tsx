@@ -5,11 +5,11 @@ import DesktopLinks from "./desktopNav/DesktopLinks";
 import { MenuClose, MenuOpen, SearchIcon } from "./mobileNav/hamburger/Hamburger";
 import Search from "../../search/Search";
 import { useEffect, useState } from "react";
-import Mobile from "./mobileNav/mobileLinks/MobileLinks";
 import Logo from "@/components/logo/Logo";
 import Cart from "@/components/cart/Cart";
 import TopNav from "../topnav/TopNav";
 import Announcement from "@/components/announcement/Announcement";
+import Mobile from "./mobileNav/mobileLinks/MobileLinks";
 
 const NavBar = () => {
   // Handle Announcement Timeout

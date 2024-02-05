@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from "./desktopLinks.module.scss"
 import Image from "next/image"
-import { NavBarData } from '../../navLinksData'
+import { NavBarData } from '../../navData'
 
 const DesktopLinks = () => {
   return (

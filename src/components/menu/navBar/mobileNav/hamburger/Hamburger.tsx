@@ -1,4 +1,4 @@
-import styles from "./hamburger.module.scss"
+import styles from "./humburger.module.scss"
 
 // Open Menu
 export const MenuOpen = () => {
@@ -11,7 +11,7 @@ return (
     )
 }
 
-// Open Menu
+// Close Menu
 export const MenuClose = () => {
     return (
         <div className={styles.iconContainer}>
