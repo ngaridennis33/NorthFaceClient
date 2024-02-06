@@ -1,3 +1,4 @@
+@import "../../styles/responsive.scss";
 .container{
     background: black;
     height: 50px;
@@ -11,9 +12,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include respond(laptop){
+            width: 100%;
+        }
         .text{
             width: 98%;
             color: #fff;
+            @include respond(laptop){
+                font-size: 12px;
+            }
         }
 
         .close{
