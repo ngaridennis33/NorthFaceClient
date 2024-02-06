@@ -21,7 +21,6 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ items }) => {
     const [trajectory, setTrajectory] = useState<'l' | 'r' | ''>('');
     const [index, setIndex] = useState(0);
-    const [touchStartX, setTouchStartX] = useState<number | null>(null);
 
     const handleClick = (direction: 'l' | 'r') => {
         const maxIndex = items.img.length - 1;
@@ -38,25 +37,6 @@ const Card: React.FC<CardProps> = ({ items }) => {
         setIndex(nextIndex);
     };
 
-    const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
-        setTouchStartX(event.touches[0].clientX);
-    };
-
-    const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
-        if (touchStartX) {
-            const touchEndX = event.changedTouches[0].clientX;
-            const deltaX = touchEndX - touchStartX;
-            const threshold = 50;
-
-            if (Math.abs(deltaX) > threshold) {
-                const direction = deltaX > 0 ? 'l' : 'r';
-                handleClick(direction);
-            }
-
-            setTouchStartX(null);
-        }
-    };
-
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
@@ -65,8 +45,6 @@ const Card: React.FC<CardProps> = ({ items }) => {
                         className={`${styles.icon} ${trajectory === 'r' ? styles.iconRight : styles.iconLeft}`}
                         style={{ right: '0' }}
                         onClick={() => handleClick('r')}
-                        onTouchStart={handleTouchStart}
-                        onTouchEnd={handleTouchEnd}
                     >
                         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#fff" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z" />
