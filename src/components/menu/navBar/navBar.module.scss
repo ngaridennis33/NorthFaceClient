@@ -61,9 +61,6 @@
                 justify-content: space-between;
                 align-items: center;
                 position: relative;
-                z-index: 10000000000;
-                // -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
                 .right{
                     display: flex;
@@ -79,8 +76,8 @@
                     top: 100px;
                     width: 100%;
                     transition: .15s ease-in;
-                    -webkit-animation: slide-in-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                    animation: slide-in-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 }
 
             }
