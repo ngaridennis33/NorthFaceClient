@@ -1,6 +1,12 @@
+import React from "react";
 import styles from "./dropdown.module.scss"
 
-const Dropdown = ({tree}) => {
+
+interface DropdownProps {
+    tree: { label: string; color?: string }[]; // Define the type for the 'tree' parameter
+  }
+
+const Dropdown: React.FC<DropdownProps> = ({ tree }) => {
 return (
     <div className={styles.dropdown}>
         <ul className={styles.list}>

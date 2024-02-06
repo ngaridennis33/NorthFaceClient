@@ -2,9 +2,6 @@
 
 import React, { useState } from 'react';
 import styles from './filter.module.scss';
-import { OpenDropdown } from '../menu/navbar/mobileNav/hamburger/Hamburger';
-import { filterData } from './filterData';
-import Dropdown from './desktopFilter/dropdown/Dropdown';
 import DesktopFilter from './desktopFilter/DesktopFilter';
 import MobileFilter from './mobileFilter/MobileFilter';
 
@@ -13,9 +10,9 @@ import MobileFilter from './mobileFilter/MobileFilter';
 const Filter = () => {
 
   const [openFilterSlider, setOpenFilterSlider] = useState(false);
-  const [openDropDown, setOpenDropDown] = useState(null);
+  const [openDropDown, setOpenDropDown] = useState<string | null>(null);
 
-  const openDropDownHandler = (label) => {
+  const openDropDownHandler = (label:string | null ) => {
       if (label === openDropDown) return setOpenDropDown(null);
       setOpenDropDown(label);
   };

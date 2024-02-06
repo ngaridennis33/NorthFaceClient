@@ -1,5 +1,9 @@
+@import "../../../styles/responsive.scss";
 .container{
     width: 300px;
+    @include respond(laptop){
+        width: 200px;
+    }
     .wrapper{
         width: 100%;
         height: 100%;
@@ -11,9 +15,11 @@
             height: 400px;
             position: relative;
             display: flex;
+            @include respond(laptop){
+                height: 300px;
+            }
             &:hover .icon{
                 opacity: 1;
-                transition: .2s ease;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
             }
 
@@ -24,7 +30,14 @@
                 padding: 10px;
                 transform: translate(0, -50%);
                 cursor: pointer;
+                transition: .2s ease;
                 opacity: 0;
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255,.1);
+                @include respond(laptop){
+                    opacity: 1;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+                }
             }
 
             .iconLeft + .imgContainer .img{
@@ -55,24 +68,30 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                padding: 2px;
+                border-radius: 15px;
+                background-color: rgba(44, 44, 44, 0.3);
                 .pos{
                     width: 15px;
                     margin-left: 10px;
                     height: 15px;
                     border-radius: 50%;
-                    border: 1px solid rgb(255, 255, 255);
+                    border: 1px solid #ffffff;
                 }
             }
 
 
             .text{
-                background-color: #fff;
+                background-color: #ebf7fa;
                 position: absolute;
                 border-radius:50px;
                 padding: 5px;
                 top: 10px;
                 left: 10px;
                 font-size: 14px;
+                font-weight: 300;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                color: #000;
             }
         }
 
