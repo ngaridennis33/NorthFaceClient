@@ -1,9 +1,9 @@
 @import "../../../styles/responsive.scss";
 .container{
     max-width: 300px;
-    // @include respond(laptop){
-    //     width: 200px
-    // }
+    @include respond(laptop){
+        width: 150px
+    }
     .wrapper{
         width: 100%;
         height: 100%;
