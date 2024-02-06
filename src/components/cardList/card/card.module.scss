@@ -2,7 +2,7 @@
 .container{
     max-width: 300px;
     @include respond(laptop){
-        width: 150px
+        width: 180px
     }
     .wrapper{
         width: 100%;
