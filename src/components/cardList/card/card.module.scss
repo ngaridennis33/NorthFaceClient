@@ -15,6 +15,7 @@
                 opacity: 1;
                 transition: .2s ease;
             }
+
             .icon{
                 position: absolute;
                 z-index: 999;
@@ -24,18 +25,27 @@
                 opacity: 0;
             }
 
+            .iconLeft + .imgContainer .img{
+                animation: slideInFromLeft .2s forwards ;
+            }
+
+            .iconRight + .imgContainer .img{
+                animation: slideInFromRight .2s forwards ;
+            }
+
             .imgContainer{
                 width: 100%;
                 position: relative;
-                transition: transform 1s ease; 
+                overflow: hidden;
 
                 .img{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    transition: .2s ease;
+                    right: -100%;
                 }
             }
+
 
             .text{
                 background-color: #fff;
@@ -89,5 +99,27 @@
                 height: 20px;
             }
         }
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%); /* Start position outside the container on the right */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* Slide in to the container */
+      opacity: 1;
     }
 }

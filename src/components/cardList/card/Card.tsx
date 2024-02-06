@@ -18,24 +18,31 @@ interface CardProps{
 }
 
 const Card: React.FC<CardProps> = ({ items }) => {
-  const [index, setIndex] = useState(0);
+    //   Handle the animation for the Card.
+    const [trajectory, setTrajectory] = useState<"l" | "r" | "">("");
+    const iconClass = trajectory === "l" ? styles.iconLeft : trajectory === "r" ? styles.iconRight : "";
 
-  const handleClick=(direction: 'l' | "r")=>{
-    if(direction == "l"){
-      setIndex(index !== 0 ? index -1 : 2)
+    const [index, setIndex] = useState(0);
+
+    const handleClick=(direction: 'l' | "r")=>{
+        if(direction == "l"){
+        setIndex(index !== 0 ? index -1 : 2)
+        setTrajectory("l");
+        }
+
+        if(direction == "r"){
+        setIndex(index !== 2 ? index + 1 : 0);
+        setTrajectory("r");
+        }
+
     }
-
-    if(direction == "r"){
-      setIndex(index !== 2 ? index + 1 : 0)
-    }
-
-  }
+    
   return (
   <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.card}>
         
-          <div className={styles.icon} style={{right:"0"}} onClick={()=> handleClick("r")}>
+          <div className={`${styles.icon} ${iconClass}`} style={{right:"0"}} onClick={()=> handleClick("r")}>
               <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fill="#fff" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/>
               </svg>
