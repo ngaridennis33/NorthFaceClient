@@ -72,13 +72,12 @@ export const  CardData = [
         ]
     },
     {
-        label:"Men’s Lhotse Reversible Hoodie",
+        label:"Men’sss Lhotse Reversible Hoodie",
         link:"/mens-scale",
         img:[
             "/catkids.jpg",
             "/catmen.jpg",
             "/catwomenshoes.jpg",
-            "/catwomen.jpg"
         ],
         prevPrice:"280.00",
         currPrice:"196.00",

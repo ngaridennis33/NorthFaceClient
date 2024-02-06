@@ -14,6 +14,7 @@
             &:hover .icon{
                 opacity: 1;
                 transition: .2s ease;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             }
 
             .icon{
@@ -42,7 +43,23 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    right: -100%;
+                }
+            }
+
+            .imgpos{
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .pos{
+                    width: 15px;
+                    margin-left: 10px;
+                    height: 15px;
+                    border-radius: 50%;
+                    border: 1px solid rgb(154, 154, 154);
                 }
             }
 
@@ -115,11 +132,11 @@
 
 @keyframes slideInFromRight {
     0% {
-      transform: translateX(100%); /* Start position outside the container on the right */
+      transform: translateX(100%);
       opacity: 0;
     }
     100% {
-      transform: translateX(0); /* Slide in to the container */
+      transform: translateX(0);
       opacity: 1;
     }
 }
