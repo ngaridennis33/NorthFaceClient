@@ -24,8 +24,8 @@ const MobileFilter: FC<Props> = ({ openDropDownHandler, openDropDown, openFilter
             </div>
 
             <div className={styles.top}>
-                <button className={styles.actionBtn}>Clear All</button>
-                <button className={styles.ctaBtn}>Apply</button>
+                <button style={{padding:"5px 20px"}} className={styles.actionBtn}>Clear All</button>
+                <button style={{padding:"5px 20px"}} className={styles.ctaBtn}>Apply</button>
             </div>
 
             <ul className={styles.filterItems}>
