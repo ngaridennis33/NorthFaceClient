@@ -1,0 +1,42 @@
+@import "../../styles/responsive.scss";
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper{
+        margin-top: 30px;
+        width: 80%;
+
+        .setionTitle{
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+
+        .mobileFilter{
+            display: none;
+            @include respond(laptop){
+                display: block;
+                .filterContainer{
+                    display: flex;
+                    width:max-content;
+                    gap: 20px;
+                    background-color: #F8F8F8;
+                    padding:5px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    li{
+                        list-style: none;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+    }
+}

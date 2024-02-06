@@ -10,7 +10,6 @@
         font-size: 16px;
         font-weight: 500;
         height: 100%;
-        transition: 3s ease;
 
         .navListItem {
             height: 100%;
@@ -22,10 +21,12 @@
             transition: .3s ease;
             &:hover {
                 color: grey;
-                border-bottom: 2px solid red;
+                border-bottom: 2px solid rgb(2, 2, 2);
 
                 .dropDown {
                 visibility: visible;
+                -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
                 }
             }
         
@@ -94,6 +95,10 @@
             .dropDownListItems {
                 font-size: 18px;
                 font-weight: bold;
+                width: max-content;
+                &:hover{
+                    color: grey;
+                }
                 
                 .dropDownListItem{
                     list-style: none;
@@ -108,9 +113,28 @@
                 }
                 .dropDownListItemList{
                     margin-left: 10px;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
             }
         }
-        }
+}
 
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

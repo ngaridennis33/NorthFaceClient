@@ -1,0 +1,39 @@
+@import "../../../styles/responsive.scss";
+
+.box{
+    margin-top: 20px;
+    display: flex;
+    @include respond(laptop){
+        display: none;
+    }
+
+    .left{
+        flex: 2;
+
+        .filterItems{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            box-sizing: border-box;
+
+            .filterItemsContainer{
+                position: relative;
+                border-radius: 10px 10px 0 0 ;
+                cursor: pointer;
+                border: 1px solid transparent;
+                .items{
+                    width: max-content;
+                    padding: 5px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    .right{
+        flex: 1;
+    }
+}

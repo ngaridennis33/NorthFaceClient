@@ -66,7 +66,7 @@ const Card: React.FC<CardProps> = ({ items }) => {
                             <div
                                 key={idx}
                                 className={styles.pos}
-                                style={{ backgroundColor: idx === index ? 'red' : '#8f8e8e' }}
+                                style={{ backgroundColor: idx === index ? '#fff' : 'transparent' }}
                             />
                         ))}
                     </div>

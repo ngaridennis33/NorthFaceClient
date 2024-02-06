@@ -1,0 +1,90 @@
+@import "../../../../styles/button.scss";
+
+.dropdown{
+    position: absolute;
+    left: 0;
+    width: 400px;
+    border: 1px solid #b5b3b3;
+    border-radius: 0 10px 10px 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: -1;
+    margin-left: -1px;
+    display: flex;
+    flex-direction: column;
+
+    .list{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content:flex-start;
+        flex-wrap: wrap;
+        max-height: 200px;
+        overflow-y: auto; 
+    }
+
+    .listItems{
+        flex: 1 0 calc(50% - 10px);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 300;
+
+        .content{
+            .checkboxLabel {
+                font-size: 18px;
+                color: #fff;
+                cursor: pointer;
+                user-select: none;
+                display: flex;
+                align-items: center;
+            }
+            .checkbox {
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #535353;
+                border-radius: 5px;
+                background-color: transparent;
+                display: inline-block;
+                position: relative;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+            
+            .checkbox:before {
+                content: "";
+                background-color: #171818;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                width: 10px;
+                height: 10px;
+                border-radius: 3px;
+                transition: all 0.3s ease-in-out;
+            }
+            
+            .checkbox:checked:before {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            
+
+        }
+
+
+        .color{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+    }
+
+    .bottom{
+        border-top: 1px solid #b5b3b3;
+        padding: 20px;
+    }
+}
