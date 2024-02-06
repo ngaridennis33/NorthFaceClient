@@ -3,13 +3,24 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    // justify-content: space-around;
+    gap: 5px;
 
     .navList {
         list-style: none;
         font-size: 16px;
         font-weight: 500;
         height: 100%;
+        background-color: red;
+        padding: 0 10px;
+        &:hover{
+            .dropDown {
+                visibility: visible;
+                -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	            animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                }
+            }
+        }
 
         .navListItem {
             height: 100%;
@@ -22,13 +33,6 @@
             &:hover {
                 color: grey;
                 border-bottom: 2px solid rgb(2, 2, 2);
-
-                .dropDown {
-                visibility: visible;
-                -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-                }
-            }
         
             .navListItemLink{
                 cursor: pointer;
@@ -42,20 +46,24 @@
             position: absolute;
             left: 0;
             top: 100%;
+            padding: 20px;
             z-index: 999;
             width: 100%;
             height:40vh;
             background-color: #fff;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            // align-items: center;
+            // justify-content: center;
             visibility: hidden;
+            background-color: rgb(241, 241, 241);
+
             }
 
             .imageContainer{
-                flex: 1;
+                // flex: 1;
+                margin: auto;
                 height: 70%;
-                width: 100%;
+                width: 50%;
                 position: relative;
                 display: flex;
                 justify-content: flex-start;
@@ -83,7 +91,8 @@
             }
         
             .dropdownList {
-            flex: 1;
+            // flex: 1;
+            align-self: flex-start;
             list-style: none;
             color: #000;
             display: flex;
