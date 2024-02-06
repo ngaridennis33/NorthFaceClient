@@ -15,9 +15,9 @@
             height: 400px;
             position: relative;
             display: flex;
-            @include respond(laptop){
-                height: 300px;
-            }
+            // @include respond(laptop){
+            //     height: 300px;
+            // }
             &:hover .icon{
                 opacity: 1;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -58,7 +58,7 @@
                     height: 100%;
                     object-fit: cover;
                     @include respond(laptop){
-                        object-fit: contain;
+                        object-fit:contain;
                     }
                 }
             }

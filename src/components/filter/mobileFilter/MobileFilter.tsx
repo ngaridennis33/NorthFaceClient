@@ -23,6 +23,11 @@ const MobileFilter: FC<Props> = ({ openDropDownHandler, openDropDown, openFilter
                 </div>
             </div>
 
+            <div className={styles.top}>
+                <button className={styles.actionBtn}>Clear All</button>
+                <button className={styles.ctaBtn}>Apply</button>
+            </div>
+
             <ul className={styles.filterItems}>
                 {filterData.map(({ label, tree }: FilterItem, index: number) => {
                     const isopen = openDropDown === label;
@@ -39,10 +44,10 @@ const MobileFilter: FC<Props> = ({ openDropDownHandler, openDropDown, openFilter
                 })}
             </ul>
 
-            <div className={styles.bottom}>
+            {/* <div className={styles.bottom}>
                 <button className={styles.actionBtn}>Clear All</button>
                 <button className={styles.ctaBtn}>Apply</button>
-            </div>
+            </div> */}
         </div>
     );
 };
