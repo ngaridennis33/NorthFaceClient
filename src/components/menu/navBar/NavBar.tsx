@@ -31,17 +31,24 @@ const NavBar = () => {
   }, []);
 
   // Handle Announcement Timeout
-  const [showAnnouncement, setShowAnnouncement] = useState(true);
+  const [showAnnouncement, setShowAnnouncement] = useState(false);
+
   const handleAnnouncement = () => {
-    setShowAnnouncement(!showAnnouncement);
+      setShowAnnouncement(false);
+      localStorage.setItem('announcementShown', 'true'); // Store flag in localStorage
   };
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowAnnouncement(false);
-    }, 3000); // 3 seconds in milliseconds
+      const announcementShown = localStorage.getItem('announcementShown');
+      if (!announcementShown) {
+          setShowAnnouncement(true);
+          const timeout = setTimeout(() => {
+              setShowAnnouncement(false);
+              localStorage.setItem('announcementShown', 'true'); // Update flag in localStorage after timeout
+          }, 3000); // 3 seconds in milliseconds
 
-    return () => clearTimeout(timeout); // Cleanup the timer if the component unmounts
+          return () => clearTimeout(timeout); // Cleanup the timer if the component unmounts
+      }
   }, []);
 
   // Handle hamburger Open and close
