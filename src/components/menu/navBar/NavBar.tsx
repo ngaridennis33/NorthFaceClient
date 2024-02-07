@@ -12,6 +12,24 @@ import Announcement from "@/components/announcement/Announcement";
 import Mobile from "./mobileNav/mobileLinks/MobileLinks";
 
 const NavBar = () => {
+
+  // Show box shadow on scroll
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+      const handleScroll = () => {
+          const threshold = 10; // Change this value to set your scroll threshold
+          const isPastThreshold = window.scrollY > threshold;
+          setIsVisible(!isPastThreshold);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+          window.removeEventListener("scroll", handleScroll);
+      };
+  }, []);
+
   // Handle Announcement Timeout
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const handleAnnouncement = () => {
@@ -35,7 +53,7 @@ const NavBar = () => {
   const toggleSearchIcon = () => setSearchOpen(!searchOpen);
 
   return (
-    <nav className={styles.container}>
+    <nav className={styles.container} style={{ boxShadow: !isVisible ? "0px 0px 10px rgba(0, 0, 0, 0.3)" : "" }}>
       {/* Announcement */}
       {showAnnouncement && (
         <div className={styles.announcement}>
