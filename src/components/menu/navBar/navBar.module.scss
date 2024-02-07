@@ -73,13 +73,15 @@
                     gap: 30px;
                 }
 
-                .mobileLinks{
+                .mobileLinks {
                     position: absolute;
                     z-index: 1000;
                     background-color: #fff;
                     left: 0;
                     top: 100px;
+                    max-height: calc(100vh - 100px); /* Adjust the value accordingly */
                     width: 100%;
+                    overflow-y: auto;
                     transition: .15s ease-in;
                     -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                     animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
