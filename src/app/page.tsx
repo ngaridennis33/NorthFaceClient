@@ -8,7 +8,6 @@ const Home = () => {
       <NavBar/>
       <Filter/>
       <CardList/>
-      Home
     </div>
   )
 }
