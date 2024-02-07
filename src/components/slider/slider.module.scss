@@ -1,0 +1,41 @@
+.slider{
+    height: calc(100vh - 100px);
+    width: 100vw;
+    position: relative;
+    .container{
+        width:max-content;
+        height: 100%;
+        display: flex;
+        transition: all 1s ease;
+            .img{
+                height:100%;
+                width: 100vw;
+                object-fit: contain;
+            }
+        
+        
+    }
+
+    .iconWrapper{
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: 100px;
+        width: fit-content;
+        .icon{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: green;
+        }
+    }
+
+}

@@ -264,6 +264,13 @@ export const NavBarData = [
     },
 ];
 
+// Data for the Slider section 
+export const SliderData = [
+    {
+        img:["/catwomen.jpg","/catmen.jpg","/catkids.jpg"]
+    }
+]
+
 
 // Data for the Categories section 
 export const CategoriesData = [
@@ -303,6 +310,8 @@ export const CategoriesData = [
         img:"/catmenshoes.jpg"
     }
 ]
+
+// Slider Data
 
 
 
