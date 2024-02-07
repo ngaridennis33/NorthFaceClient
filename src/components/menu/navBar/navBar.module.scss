@@ -24,7 +24,7 @@
         font-family:helvetica-neue-lt, sans-serif;
 
         @include respond(laptop){
-                height: 115px;
+                height: 100px;
             }
         .deskTopwrapper{
             width: 80%;
@@ -66,7 +66,7 @@
                 justify-content: space-between;
                 align-items: center;
                 position: relative;
-                height: 115px;
+                // height: 115px;
 
                 .right{
                     display: flex;
@@ -79,7 +79,7 @@
                     z-index: 1000;
                     background-color: #fff;
                     left: 0;
-                    top: 115px;
+                    top: 100px;
                     width: 100%;
                     transition: .15s ease-in;
                     -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

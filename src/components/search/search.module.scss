@@ -10,9 +10,11 @@
     @include respond(laptop){
             position: absolute;
             bottom: -10px;
+            z-index: 9999999999999999999;
             left: 50%;
             transform: translateX(-50%);
-            width:90%;
+            width:100%;
+            // padding: 3px;
             background-color: #fff;
 
     }
