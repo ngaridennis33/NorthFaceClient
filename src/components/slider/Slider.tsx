@@ -7,12 +7,13 @@ import Image from 'next/image'
 
 const Slider = () => {
     const [currSlide, setcurrSlide] = useState(0);
+    const numSlides = CategoriesData.length -1;
 
     const prevSlide=()=>{
-        setcurrSlide(currSlide === 0 ? 2 : (prev) => prev -1 )
+        setcurrSlide(currSlide === 0 ? numSlides : (prev) => prev -1 )
     }
     const nextSlide=()=>{
-        setcurrSlide(currSlide === 2 ? 0 : (prev) => prev + 1 )
+        setcurrSlide(currSlide === numSlides ? 0 : (prev) => prev + 1 )
     }
   return (
     <div className={styles.slider}>
