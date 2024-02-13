@@ -28,10 +28,14 @@
             align-items: center;
             justify-content: center;
             border-bottom: 2px solid transparent;
+            background-image: linear-gradient(grey,black);
+            background-size: 0% 3px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
             transition: .3s ease;
             &:hover {
                 color: grey;
-                border-bottom: 2px solid rgb(2, 2, 2);
+                background-size: 100% 3px;
         
             .navListItemLink{
                 cursor: pointer;
@@ -54,7 +58,7 @@
             // align-items: center;
             // justify-content: center;
             visibility: hidden;
-            background-color: rgb(241, 241, 241);
+            // background-color: rgb(241, 241, 241);
 
             }
 
