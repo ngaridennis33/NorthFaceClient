@@ -7,6 +7,8 @@ import Cart from '@/components/cart/Cart';
 import Link from 'next/link';
 
 interface Item {
+    id?:number,
+    slug:string,
     img: string[];
     label: string;
     currPrice: string;
@@ -36,7 +38,6 @@ const Card: React.FC<CardProps> = ({ items }) => {
 
         setIndex(nextIndex);
     };
-
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
@@ -51,9 +52,9 @@ const Card: React.FC<CardProps> = ({ items }) => {
                         </svg>
                     </div>
                     <div className={styles.imgContainer} key={index}>
-                    <Link href={{ pathname: '/product', query: {items: JSON.stringify(items) } }} passHref>
+                    <Link href={`/product/${items.slug}`}>
                             <Image className={styles.img} src={items.img[index]} alt="" fill />
-                        </Link>
+                    </Link>
                     </div>
                     <div className={styles.text}>
                         <span> Reversible </span>

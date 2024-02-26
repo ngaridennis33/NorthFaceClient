@@ -7,9 +7,9 @@ const CardList = () => {
   return (
     <div className={styles.container}>
         <div className={styles.wrapper}>
-          {CardData.map((items,index)=>(
+          {CardData.map((items)=>(
 
-            <Card key={index} items = {items}/>
+            <Card key={items.id} items={items}/>
           ))}
         </div>
 
