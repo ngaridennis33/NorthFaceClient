@@ -13,7 +13,7 @@ interface Item {
   color: string[];
 }
 
-const SinglePage = () => {
+const SinglePageContent = () => {
   const searchParams = useSearchParams();
   const itemsString = searchParams.get('items');
 
@@ -24,7 +24,7 @@ const SinglePage = () => {
   const parsedItems: Item | null = itemsString ? JSON.parse(itemsString) : null;
   if (!parsedItems) {
     // Handle the case where the items are not found
-    return <div>Items not found</div>;
+    return <div>No item Found</div>;
   }
 
   return (
@@ -60,10 +60,10 @@ const SinglePage = () => {
   );
 };
 
-const Success = () => {
+const SinglePage = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <SinglePage />
+      <SinglePageContent />
     </Suspense>
   );
 };
