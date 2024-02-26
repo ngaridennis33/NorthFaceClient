@@ -13,11 +13,7 @@ interface Item {
   color: string[];
 }
 
-interface SinglePageProps {
-  items: Item;
-}
-
-const SinglePage = ({ items }: SinglePageProps) => {
+const SinglePage = () => {
   const searchParams = useSearchParams();
   const itemsString = searchParams.get('items');
 
