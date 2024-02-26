@@ -51,7 +51,9 @@ const Card: React.FC<CardProps> = ({ items }) => {
                         </svg>
                     </div>
                     <div className={styles.imgContainer} key={index}>
-                        <Image className={styles.img} src={items.img[index]} alt="" fill />
+                    <Link href={{ pathname: '/product', query: {items: JSON.stringify(items) } }} passHref>
+                            <Image className={styles.img} src={items.img[index]} alt="" fill />
+                        </Link>
                     </div>
                     <div className={styles.text}>
                         <span> Reversible </span>
@@ -68,7 +70,7 @@ const Card: React.FC<CardProps> = ({ items }) => {
                                 className={styles.pos}
                                 style={{ backgroundColor: idx === index ? '#ff0c0c' : 'transparent' }}
                             />
-                        ))}
+                            ))}
                     </div>
                 </div>
                 <div className={styles.desc}>
