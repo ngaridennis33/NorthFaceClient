@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import styles from "./page.module.scss";
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
@@ -58,6 +58,14 @@ const SinglePage = () => {
       </div>
     </div>
   );
-}
+};
+
+const Success = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SinglePage />
+    </Suspense>
+  );
+};
 
 export default SinglePage;
