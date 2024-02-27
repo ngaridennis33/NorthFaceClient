@@ -25,7 +25,7 @@ export const CardData: Item[] = [
         id:2,
         slug:"mens-Lhotse-2",
         label:"Women’s Lhotse Reversible Jacket",
-        category:"women's",
+        category:"womens",
         img:[
             "/catkids.jpg",
             "/catmen.jpg",

@@ -9,19 +9,20 @@ import React from 'react';
 const Category = () => {
   const params = useParams();
   const { cat } = params;
-  console.log(cat);
+
 
   let products: Item[];
 
   // Check if cat is undefined, show all items
-  if (cat === undefined) {
-    products = CardData;
-  } else {
+
     // Filter items based on the provided cat
     products = CardData.filter(item => item.category === cat);
-  }
-  console.log(products)
-  console.log(CardData)
+
+    // Handle the case where the items are not found
+    if (products.length == 0) {
+      return <div>Item not found</div>;
+    }
+    console.log(products)
 
   return (
     <div>

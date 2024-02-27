@@ -236,7 +236,7 @@ export const NavBarData = [
     },
     {
     label: "Kids'",
-    link: "/kids",
+    link: "/kid's",
     tree:null,
 
     },

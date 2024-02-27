@@ -111,29 +111,42 @@
                 }
             }
         }
-        .action{
+        .action {
             display: flex;
             gap: 50px;
-
-            .checkbox{
-                display: flex;
-                align-items: center;
-                input[type="checkbox"] {
-                    margin-right: 8px;
-                    appearance: none;
-                    cursor: pointer;
-                    width: 18px;
-                    height: 18px;
-                    border: 2px solid #333;
-                    border-radius: 4px;
-                    outline: none;
-                    &:checked {
-                        background-color: $color-black;
-                        border-color: $color-grey;
-                    }
+          
+            .checkbox {
+              display: flex;
+              align-items: center;
+          
+              input[type="checkbox"] {
+                margin-right: 8px;
+                appearance: none;
+                cursor: pointer;
+                width: 18px;
+                height: 18px;
+                border: 2px solid #333;
+                border-radius: 4px;
+                outline: none;
+                position: relative;
+          
+                &:checked {
+                  background-color: $color-black;
+                  border-color: $color-grey;
+          
+                  &::before {
+                    content: '✔';  // Unicode checkmark character
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    font-size: 14px;
+                  }
                 }
+              }
             }
-        }
+          }
     }
 
     .register{
