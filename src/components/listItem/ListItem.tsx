@@ -5,7 +5,7 @@ import Image from 'next/image';
 const ListItem = () => {
   return (
     <div className={styles.listItem}>
-      <Image src="/catwomenshoes.jpg" alt="" width={500} height={500}/>
+      <Image className={styles.img} src="/catwomenshoes.jpg" alt="" width={500} height={500}/>
     </div>
   )
 }
