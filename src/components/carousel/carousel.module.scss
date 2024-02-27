@@ -1,0 +1,38 @@
+.container{
+    width: 100%;
+    margin-top: 10px;
+
+    .title{
+       color: grey; 
+       font-size: 20px;
+       font-weight: 500;
+    }
+    .wrapper{
+        position: relative;
+        .icon{
+            width: 50px;
+            height: 100%;
+            background-color: rgb(122, 121, 121,.8);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            cursor: pointer;
+            z-index: 999;
+            &.right{
+                right: 0;
+            }
+            &.left{
+                left: 0;
+            }
+        }
+        .list{
+            margin-top: 10px;
+            margin-left: 50px;
+            display: flex;
+            width: max-content;
+            transform: translateX(0px);
+            transition:all 1s ease ;
+        }
+    }
+}
