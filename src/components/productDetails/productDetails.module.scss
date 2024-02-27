@@ -1,90 +1,90 @@
-.right{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    .label{
-        font-weight: bold;
-        font-size: 20px;
-    }
-    .price{
-        font-size: 20px;
-        font-weight: 500;
-        color: #2879fe;
-        display: flex;
-        gap: 5px;
-        .prevPrice{
-            color: rgb(192, 13, 13);
-            text-decoration: line-through;
-        }
-    }
-    .desc{
-        font-size: 18px;
-        font-weight: 300;
-        text-align: justify;
-    }
-    .quantity{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        .pButton{
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            background-color: rgb(209, 209, 209);
-        }
-    }
-   
-    .selectColor{
-        display: flex;
-        width: 100%;
-        gap: 5px;
-        cursor: pointer;
-
-        .color{
-            margin-top: 10px;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            border: 1px solid grey;
-        }
-    }
-
-    .add{
-        width: max-content;
-        padding: 10px;
-        background-color: #2879fe;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        cursor: pointer;
-        font-weight: 500;
-    }
-    .links{
-        display: flex;
-        gap: 20px;
-        .item{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-        }
-    }
-    .info{
+    .right{
+        flex: 1;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        color: gray;
-        font-size: 14px;
-        margin-top: 30px;
-        hr{
-            width: 200px;
-            border: 1px solid rgb(177, 177, 177);
+        .label{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .price{
+            font-size: 20px;
+            font-weight: 500;
+            color: #2879fe;
+            display: flex;
+            gap: 5px;
+            .prevPrice{
+                color: rgb(192, 13, 13);
+                text-decoration: line-through;
+            }
+        }
+        .desc{
+            font-size: 18px;
+            font-weight: 300;
+            text-align: justify;
+        }
+        .quantity{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .pButton{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background-color: rgb(209, 209, 209);
+            }
+        }
+       
+        .selectColor{
+            display: flex;
+            width: 100%;
+            gap: 5px;
+            cursor: pointer;
+
+            .color{
+                margin-top: 10px;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                border: 1px solid grey;
+            }
+        }
+
+        .add{
+            width: max-content;
+            padding: 10px;
+            background-color: #2879fe;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .links{
+            display: flex;
+            gap: 20px;
+            .item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-size: 14px;
+            }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: gray;
+            font-size: 14px;
+            margin-top: 30px;
+            hr{
+                width: 200px;
+                border: 1px solid rgb(177, 177, 177);
+            }
         }
     }
-}

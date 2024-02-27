@@ -75,12 +75,12 @@ export const NavBarData = [
         },
         {
             label:"Women's Footwear Sale",
-            link:"women-footware-sale",
+            link:"women-footwear-sale",
             branches:null,
         },
         {
             label:"Men's Footwear Sale",
-            link:"/men-footware-sale",
+            link:"/men-footwear-sale",
             branches:null,
         },
         {
@@ -154,12 +154,12 @@ export const NavBarData = [
         },
         {
             label:"Fleece",
-            link:"women-footware-sale",
+            link:"women-footwear-sale",
             branches:null,
         },
         {
             label:"Tops",
-            link:"/men-footware-sale",
+            link:"/men-footwear-sale",
             branches:null,
         },
         {
@@ -168,7 +168,7 @@ export const NavBarData = [
             branches:null,
         },
         {
-            label:"Footware",
+            label:"Footwear",
             link:"/shop-all-sale",
             branches:null,
         },
@@ -218,12 +218,12 @@ export const NavBarData = [
         },
         {
             label:"Women's Footwear Sale",
-            link:"women-footware-sale",
+            link:"women-footwear-sale",
             branches:null,
         },
         {
             label:"Men's Footwear Sale",
-            link:"/men-footware-sale",
+            link:"/men-footwear-sale",
             branches:null,
         },
         {
@@ -242,7 +242,7 @@ export const NavBarData = [
     },
     {
     label: "Footwear",
-    link: "/footware",
+    link: "/footwear",
     tree:null,
 
     },
@@ -300,12 +300,12 @@ export const CategoriesData = [
         img:"/catbag.jpg"
     },
     {
-        label: "Women's Footware",
+        label: "Women's footwear",
         link:"/womens-scale", 
         img:"/catwomenshoes.jpg"
     },
     {
-        label: "Men's Footware",
+        label: "Men's footwear",
         link:"/men's-scale", 
         img:"/catmenshoes.jpg"
     }
@@ -357,12 +357,12 @@ export const NavBarDataMobile:NavBarDataMobileItem[] = [
         },
         {
             label:"Women's Footwear Sale",
-            link:"women-footware-sale",
+            link:"women-footwear-sale",
             branches:null,
         },
         {
             label:"Men's Footwear Sale",
-            link:"/men-footware-sale",
+            link:"/men-footwear-sale",
             branches:null,
         },
         {
@@ -436,12 +436,12 @@ export const NavBarDataMobile:NavBarDataMobileItem[] = [
         },
         {
             label:"Fleece",
-            link:"women-footware-sale",
+            link:"women-footwear-sale",
             branches:null,
         },
         {
             label:"Tops",
-            link:"/men-footware-sale",
+            link:"/men-footwear-sale",
             branches:null,
         },
         {
@@ -450,7 +450,7 @@ export const NavBarDataMobile:NavBarDataMobileItem[] = [
             branches:null,
         },
         {
-            label:"Footware",
+            label:"footwear",
             link:"/shop-all-sale",
             branches:null,
         },
@@ -500,12 +500,12 @@ export const NavBarDataMobile:NavBarDataMobileItem[] = [
         },
         {
             label:"Women's Footwear Sale",
-            link:"women-footware-sale",
+            link:"women-footwear-sale",
             branches:null,
         },
         {
             label:"Men's Footwear Sale",
-            link:"/men-footware-sale",
+            link:"/men-footwear-sale",
             branches:null,
         },
         {
@@ -524,7 +524,7 @@ export const NavBarDataMobile:NavBarDataMobileItem[] = [
     },
     {
     label: "Footwear",
-    link: "/footware",
+    link: "/footwear",
     tree:null,
 
     },

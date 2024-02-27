@@ -1,13 +1,15 @@
+import { Item } from '@/types'
 import Card from './card/Card'
-import { CardData } from './cardData'
 import styles from "./cardList.module.scss"
 
-
-const CardList = () => {
+interface CardListProductProps{
+  products: Item[];
+}
+const CardList = ({products}:CardListProductProps) => {
   return (
     <div className={styles.container}>
         <div className={styles.wrapper}>
-          {CardData.map((items)=>(
+          {products && products.map((items)=>(
 
             <Card key={items.id} items={items}/>
           ))}

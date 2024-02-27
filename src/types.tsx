@@ -1,7 +1,10 @@
 export interface Item {
-    img: string[];
+    id:number,
+    slug:string,
     label: string;
-    currPrice: string;
+    category:string,
+    img: string[];
     prevPrice: string;
+    currPrice: string;
     color: string[];
 }

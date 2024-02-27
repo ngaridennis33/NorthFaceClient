@@ -5,16 +5,8 @@ import Image from 'next/image';
 import styles from './card.module.scss';
 import Cart from '@/components/cart/Cart';
 import Link from 'next/link';
+import { Item } from '@/types';
 
-interface Item {
-    id?:number,
-    slug:string,
-    img: string[];
-    label: string;
-    currPrice: string;
-    prevPrice: string;
-    color: string[];
-}
 
 interface CardProps {
     items: Item;
@@ -52,7 +44,7 @@ const Card: React.FC<CardProps> = ({ items }) => {
                         </svg>
                     </div>
                     <div className={styles.imgContainer} key={index}>
-                    <Link href={`/product/${items.slug}`}>
+                    <Link href={`/${items.category}/${items.slug}`}>
                             <Image className={styles.img} src={items.img[index]} alt="" fill />
                     </Link>
                     </div>
