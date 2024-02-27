@@ -4,6 +4,7 @@ import React, { useRef, RefObject, useState } from 'react';
 import styles from './carousel.module.scss';
 import ListItem from '../listItem/ListItem';
 import { LeftIcon, RightIcon } from '../icons/Icons';
+import { CardData } from '../cardList/cardData';
 
 
 const Carousel = () => {
@@ -37,16 +38,10 @@ const Carousel = () => {
         </div>
 
         <div className={styles.list} ref={listRef}>
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
+            {CardData.map((items)=>(
+
+          <ListItem items={items} key={items.id} />
+            ))}
         </div>
 
         <div className={`${styles.icon} ${styles.right}`} onClick={() => handleClick('right')}>
