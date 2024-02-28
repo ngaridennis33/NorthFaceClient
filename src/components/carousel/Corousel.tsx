@@ -42,6 +42,7 @@ const Carousel = () => {
 
           <ListItem items={items} key={items.id} />
             ))}
+
         </div>
 
         <div className={`${styles.icon} ${styles.right}`} onClick={() => handleClick('right')}>

@@ -3,9 +3,7 @@
     flex: 1;
     display: flex;
     gap: 20px;
-    @include respond(laptop){
-        flex-direction: column;
-    }
+    background-color: red;
 
     .images{
         flex: 1;
@@ -13,9 +11,7 @@
         width: 100%;
         height: 100%;
         @include respond(laptop){
-            display: flex;
-            background-color: red;
-            overflow: hidden;
+            display: none;
         }
        
         .img{
@@ -36,12 +32,51 @@
     }
     .mainImg{
         flex: 5;
-        width: 100%;
-        height: 100%;
-        .img{
+        width:fit-content;
+        height:fill ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: green;
+        position: relative;
+        @include respond(laptop){
+            width: 200px;
+        }
+    
+        .imgDesk{
             width: 100%;
+            height: 100%;
             max-height: 800px;
             object-fit: cover;
+            background-color: red;
+            @include respond(laptop){
+                display: none;
+            }
+        }
+
+        .mobile{
+            height: 100%;
+            width: 100%;
+            display: none;
+            @include respond(laptop){
+                display: block;
+                .icon{
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    background-color: red;
+                    cursor:pointer;
+                }
+                .leftIcon{
+                    left: 0;
+                }
+                .rightIcon{
+                    right: 0;
+                }
+            }
         }
     }
 

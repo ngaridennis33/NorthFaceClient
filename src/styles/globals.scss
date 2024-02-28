@@ -1,32 +1,48 @@
 @import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0';
 @import "responsive"; 
 @import 'tailwindcss/base';
-@import 'tailwindcss/components';
+// @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import "./variables.scss";
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-html,
 body {
-  padding-top: 50px;
+  // padding-top: 50px;
   font-family:Lexend, sans-serif;
   line-height: 1.6;
   font-size: 16px;
-  // min-height: 100vh;
-  background-color: #fff;
   color: #000;
+  min-height: 100dvh;
+  min-width: 100vw;
   overflow-x: hidden;
-  width: 100vw;
-//   @include respond(laptop){
-//     padding-top: 0;
-// }
-  
+}
+
+/* The Container holding the body */
+.container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  height: 100%;
+  width: 90%;
+  overflow: hidden;
+
+  // margin: auto;
+}
+
+h1,h2,h3 {
+  text-wrap: balance;
 }
 
 /* Font size variables */
@@ -61,5 +77,3 @@ a{
     text-decoration: underline;
   }
 }
-
-
