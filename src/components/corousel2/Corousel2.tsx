@@ -8,7 +8,7 @@ import { LeftIcon, RightIcon } from '../icons/Icons';
 
 const Corousel = () => {
   const listRef: RefObject<HTMLDivElement> = useRef(null);
-  const [slideIndex, setSlideNumber] = useState(1);
+  const [slideIndex, setSlideNumber] = useState(0);
   const [isMoved, setIsMoved] = useState(false);
 
   const handleClick = (direction: 'left' | 'right') => {
@@ -16,7 +16,8 @@ const Corousel = () => {
     console.log("clicked");
     if (listRef.current) {
       const slideWidthPercentage = 100;
-      const maxSlides = CardData.length;
+      const maxSlides = CardData.length/4;
+      console.log(slideIndex)
   
       if (direction === 'left' && slideIndex > 0) {
         const translateValue = (slideIndex - 1) * -slideWidthPercentage;
