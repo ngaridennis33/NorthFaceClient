@@ -41,13 +41,15 @@
                 object-fit:cover;
                 object-position: center;
                 border-radius: 1rem;
+                z-index: 999;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             }
             .bg{
+                z-index: -10;
                 width: 100%;
                 position: absolute;
                 height: 5rem;
-                background-color: rgb(84, 142, 229);
+                background-color: rgb(35, 82, 151);
                 border-radius: 0 0 10px 10px;
                 bottom: 0;
                 left: 0;

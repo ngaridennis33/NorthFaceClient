@@ -38,10 +38,9 @@ body {
   width: 90%;
   overflow: hidden;
   @include respond(laptop){
-    width: 100%;
+    // width: 100%;
 }
 
-  // margin: auto;
 }
 
 h1,h2,h3 {
