@@ -33,6 +33,10 @@ const Corousel = () => {
   };
   return (
     <div className={styles.container}>
+      <div className={styles.title}>
+        <h1>Black Friday Sale</h1>
+      </div>
+    <div className={styles.wrapper}>
       <div className={`${styles.handle} ${styles.left}`} onClick={() => handleClick('left')} >
         <LeftIcon/>
       </div>
@@ -40,6 +44,7 @@ const Corousel = () => {
       {CardData.map((items)=>(
         <Link href={`/${items.category}`} key = {items.id} className={styles.imgLink}>
           <Image className={styles.img} width={500} height={500} alt = ""src={items.img[0]}/>
+          <div className={styles.bg}></div>
         </Link>
         ))}
       </div>
@@ -47,6 +52,7 @@ const Corousel = () => {
         <RightIcon/>
       </div>
     </div>
+        </div>
   )
 }
 

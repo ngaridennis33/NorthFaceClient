@@ -1,7 +1,7 @@
 import Accordion from "@/components/accordion/Accordion";
 import CardList from "@/components/cardList/CardList";
 import { CardData } from "@/components/cardList/cardData";
-import Corousel from "@/components/corousel2/Corousel2";
+import Corousel from "@/components/corousel/Corousel2";
 // import Corousel from "@/components/carousel/Corousel";
 import Filter from "@/components/filter/Filter";
 import NavBar from "@/components/menu/navBar/NavBar";
