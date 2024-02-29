@@ -5,6 +5,7 @@ import styles from "./corousel2.module.scss";
 import { CardData } from '../cardList/cardData';
 import Image from 'next/image';
 import { LeftIcon, RightIcon } from '../icons/Icons';
+import Link from 'next/link';
 
 const Corousel = () => {
   const listRef: RefObject<HTMLDivElement> = useRef(null);
@@ -37,13 +38,14 @@ const Corousel = () => {
       </div>
       <div className={styles.slider} ref={listRef}>
       {CardData.map((items)=>(
-          <Image className={styles.img} width={500} height={500} alt = "" key = {items.id} src={items.img[0]}/>
+        <Link href={`/${items.category}`} key = {items.id} className={styles.imgLink}>
+          <Image className={styles.img} width={500} height={500} alt = ""src={items.img[0]}/>
+        </Link>
         ))}
       </div>
       <div className={`${styles.handle} ${styles.right}`}onClick={() => handleClick('right')} >
         <RightIcon/>
       </div>
-
     </div>
   )
 }
