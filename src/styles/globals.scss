@@ -37,6 +37,9 @@ body {
   height: 100%;
   width: 90%;
   overflow: hidden;
+  @include respond(laptop){
+    width: 100%;
+}
 
   // margin: auto;
 }
