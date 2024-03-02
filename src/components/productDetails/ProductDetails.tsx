@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import styles from "./productDetails.module.scss";
 import { Item } from '@/types';
-import Cart from '../cart/Cart';
+import { CartIcon } from '../icons/Icons';
 
 interface ProductDetailsProps{
     product: Item;
@@ -30,7 +30,7 @@ const ProductDetails = ({product}:ProductDetailsProps) => {
           {quantity}
           <button className={styles.pButton} onClick={()=> setQuantity(prev=>prev+1)}>+</button>
         </div>
-          <button className={styles.add}><Cart/> ADD TO CART</button>
+          <button className={styles.add}><CartIcon/> ADD TO CART</button>
           <div className={styles.links}>
             <div className={styles.item}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="50" height="50">

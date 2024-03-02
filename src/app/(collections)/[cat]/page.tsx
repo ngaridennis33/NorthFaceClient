@@ -5,6 +5,7 @@ import { CardData } from '@/components/cardList/cardData';
 import { Item } from '@/types';
 import { useParams } from 'next/navigation';
 import React from 'react';
+import styles from "./page.module.scss";
 
 const Category = () => {
   const params = useParams();
@@ -22,10 +23,9 @@ const Category = () => {
     if (products.length == 0) {
       return <div>Item not found</div>;
     }
-    console.log(products)
 
   return (
-    <div>
+    <div className={styles.container}>
       <CardList products={products} />
     </div>
   );

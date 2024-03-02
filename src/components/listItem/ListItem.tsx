@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./listItem.module.scss";
 import Image from 'next/image';
-import Cart from '../cart/Cart';
+
 import { Item } from '@/types';
 
 interface ListItemProps{

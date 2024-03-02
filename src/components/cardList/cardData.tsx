@@ -121,6 +121,26 @@ export const CardData: Item[] = [
         ]
     },
     {
+        id:70,
+        slug:"mens-Lhotse-6",
+        label:"Women’s Lhotse Reversible Jacket",
+        category:"bags-and-gear",
+        img:[
+            "/catwomenshoes.jpg",
+            "/catkids.jpg",
+            "/catmen.jpg",
+            "/catwomen.jpg"
+        ],
+        prevPrice:"280.00",
+        currPrice:"196.00",
+        color:[
+            "#000",
+            "#999",
+            "#e4e4",
+            "#80e3"
+        ]
+    },
+    {
         id:7,
         slug:"mens-Lhotse-7",
         label:"Men’s Lhotse Reversible Hoodie",

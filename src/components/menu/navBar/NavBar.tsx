@@ -6,12 +6,15 @@ import { MenuClose, MenuOpen, SearchIcon } from "./mobileNav/hamburger/Hamburger
 import Search from "../../search/Search";
 import { useEffect, useState } from "react";
 import Logo from "@/components/logo/Logo";
-import Cart from "@/components/cart/Cart";
 import TopNav from "../topnav/TopNav";
 import Announcement from "@/components/announcement/Announcement";
 import Mobile from "./mobileNav/mobileLinks/MobileLinks";
+import { CartIcon } from "@/components/icons/Icons";
+import Cart from "@/components/cart/Cart";
 
 const NavBar = () => {
+  // Open and close Cart
+  const [openCart,setOpenCart] = useState(false);
 
   // Show box shadow on scroll
   const [isVisible, setIsVisible] = useState(true);
@@ -93,8 +96,8 @@ const NavBar = () => {
           </div>
 
           {/* Shopping Cart Section */}
-          <div className={styles.cart}>
-            <Cart />
+          <div className={styles.cart} onClick={()=> setOpenCart(!openCart)}>
+            <CartIcon />
           </div>
         </div>
 
@@ -109,8 +112,11 @@ const NavBar = () => {
             <div className={styles.searchIconToogle} onClick={toggleSearchIcon}>
               {searchOpen ? <MenuClose /> : <SearchIcon />}
             </div>
+            
+            <div onClick={()=> setOpenCart(!openCart)}>
+            <CartIcon />
+            </div>
 
-            <Cart />
 
             {/* Mobile View Hamburger */}
             <div className={styles.mobileHamburgerCotainer} onClick={toogleHamburgerIcon}>
@@ -127,6 +133,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+      {openCart && <Cart/>}
     </nav>
   );
 };

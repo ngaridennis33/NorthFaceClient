@@ -3,7 +3,6 @@
     flex: 1;
     display: flex;
     gap: 20px;
-    background-color: red;
 
     .images{
         flex: 1;
@@ -37,7 +36,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: green;
+        // background-color: green;
         position: relative;
         @include respond(laptop){
             width: 200px;
@@ -48,7 +47,7 @@
             height: 100%;
             max-height: 800px;
             object-fit: cover;
-            background-color: red;
+            // background-color: red;
             @include respond(laptop){
                 display: none;
             }
@@ -67,7 +66,7 @@
                     top: 0;
                     bottom: 0;
                     margin: auto;
-                    background-color: red;
+                    // background-color: red;
                     cursor:pointer;
                 }
                 .leftIcon{

@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './card.module.scss';
-import Cart from '@/components/cart/Cart';
 import Link from 'next/link';
 import { Item } from '@/types';
+import { CartIcon } from '@/components/icons/Icons';
 
 
 interface CardProps {
@@ -74,7 +74,7 @@ const Card: React.FC<CardProps> = ({ items }) => {
                         <span className={styles.currentPrice}> $ {items.currPrice}</span>
                         <span className={styles.prevPrice}> $ {items.prevPrice}</span>
                     </div>
-                    <Cart />
+                    <CartIcon />
                 </div>
                 <div className={styles.selectColor}>
                     {items.color.map((color, index) => (

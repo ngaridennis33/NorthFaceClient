@@ -8,9 +8,11 @@ interface CardListProductProps{
 const CardList = ({products}:CardListProductProps) => {
   return (
     <div className={styles.container}>
+      <div className={styles.title}>
+        <h1> Top sales</h1>
+      </div>
         <div className={styles.wrapper}>
           {products && products.map((items)=>(
-
             <Card key={items.id} items={items}/>
           ))}
         </div>
