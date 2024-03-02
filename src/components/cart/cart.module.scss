@@ -1,5 +1,5 @@
 @import "../../styles/button.scss";
-@import "../../styles/animation.scss";
+@import "../../styles/responsive.scss";
 
 .container {
     padding: 20px;
@@ -9,12 +9,15 @@
     right: 20px;
     background-color: #f7faff;
     -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 7px -5px rgb(0,0,0,.5);
-    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    box-shadow: 0px 0px 7px 0px rgb(0,0,0,.5);
+    @include respond(laptop){
+        right: 0;
+        height: 100dvh;
+    }
     .title{
         margin-bottom: 30px;
         color: gray;
+        font-weight: bold;
         font-size: 24px;
     }
     .item{
@@ -58,8 +61,13 @@
         display: flex;
         gap: 10px;
         flex-direction: column;
+        align-items: center;
         .reset{
             color: red;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 3px;
+            border: 1px solid red;
         }
     }
  
