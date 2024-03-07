@@ -2,7 +2,14 @@
     height: calc(100vh - 100px);
     width: 100vw;
     position: relative;
+    background-image: url("../../../public/bannerBg.png");
+    background-color: #031A31;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
     .container{
+
+        border-radius: 0px 0px 200px 0px;
         width: 80%;
         width:max-content;
         height: 100%;

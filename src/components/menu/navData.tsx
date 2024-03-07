@@ -277,37 +277,44 @@ export const CategoriesData = [
     {
         label: "Women's",
         link:"/womens-scale", 
-        img:"/catwomen.jpg"
+        img:"/banner.jpg",
+        bg:"linear-gradient(90deg, rgba(2,0,36,.7) 0%, rgba(121,9,111,0.8435749299719888) 35%, rgba(0,212,255,.1) 100%)",
     },
     {
         label: "Mens's",
         link:"/mens-scale", 
-        img:"/catmen.jpg"
+        img:"/catmen.jpg",
+        bg:"#000",
     },
     {
         label: "kid's",
         link:"/kids-scale", 
-        img:"/catkids.jpg"
+        img:"/catkids.jpg",
+        bg:"linear-gradient(90deg, rgba(2,0,36,.1) 0%, rgba(121,9,111,0.8435749299719888) 35%, rgba(0,212,255,1) 100%)",
     },
     {
         label: "Accessories's",
         link:"/accessories-scale", 
-        img:"/accessories.jpg"
+        img:"/accessories.jpg",
+        bg:"#000",
     },
     {
         label: "Bags and Gear's",
         link:"/bags-gear-scale", 
-        img:"/catbag.jpg"
+        img:"/catbag.jpg",
+        bg:"linear-gradient(to right top, #051937, #202c6c, #56389d, #9b37c6, #eb12e2)",
     },
     {
         label: "Women's footwear",
         link:"/womens-scale", 
-        img:"/catwomenshoes.jpg"
+        img:"/catwomenshoes.jpg",
+        bg:"#000",
     },
     {
         label: "Men's footwear",
         link:"/men's-scale", 
-        img:"/catmenshoes.jpg"
+        img:"/catmenshoes.jpg",
+        bg:"linear-gradient(90deg, rgba(2,0,36,.7) 0%, rgba(121,9,111,0.8435749299719888) 35%, rgba(0,212,255,.1) 100%)",
     }
 ]
 

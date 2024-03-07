@@ -20,14 +20,14 @@ const Slider = () => {
         <div className={styles.container} style={{transform:`translateX(-${currSlide  * 100}vw)`}}>
         {CategoriesData.map((category, index) => (
                 
-                <div key={index} >
+                <div key={index} style={{background:`${category.bg}`}}>
 
                 <Image
                     className={styles.img}
                     src={category.img}
                     alt={category.label}
                     width={500}
-                    height={500}
+                    height={1000}
                     />
                     </div>
             ))}
