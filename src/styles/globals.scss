@@ -13,6 +13,25 @@
     box-sizing: border-box;
 }
 
+html{
+  //This defines what one rem is
+  font-size: 62.5%;  // 1rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tablet){ //width < 900px
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(laptop){ //width < 1200px
+    font-size: 56.25%; //1rem = 9px; 9/16 = 56.25%
+  }
+
+  @include respond(bigDesktop){ //width > 1800px
+    font-size: 75%; //1rem = 12px; 12/16 = 75%
+  }
+
+  height: -webkit-fill-available;
+}
+
 body {
   // padding-top: 50px;
   font-family:Lexend, sans-serif;
