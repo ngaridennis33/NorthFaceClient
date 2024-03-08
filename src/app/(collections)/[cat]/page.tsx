@@ -30,6 +30,7 @@ const Category = () => {
     <div className={styles.container}>
       <Banner/>
       <Filter/>
+      <hr />
       <CardList products={products} />
     </div>
   );
