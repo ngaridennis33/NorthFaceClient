@@ -37,7 +37,7 @@ const Corousel = () => {
         <h1>Black Friday Sale</h1>
       </div>
     <div className={styles.wrapper}>
-      <div className={`${styles.handle} ${styles.left}`} onClick={() => handleClick('left')} >
+      <div className={styles.handle} onClick={() => handleClick('left')} style={{left:".5rem"}}>
         <LeftIcon/>
       </div>
       <div className={styles.slider} ref={listRef}>
@@ -48,7 +48,7 @@ const Corousel = () => {
         </Link>
         ))}
       </div>
-      <div className={`${styles.handle} ${styles.right}`}onClick={() => handleClick('right')} >
+      <div className={styles.handle} onClick={() => handleClick('right')} style={{right:".5rem"}}>
         <RightIcon/>
       </div>
     </div>
