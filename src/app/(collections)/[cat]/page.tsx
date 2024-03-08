@@ -6,6 +6,8 @@ import { Item } from '@/types';
 import { useParams } from 'next/navigation';
 import React from 'react';
 import styles from "./page.module.scss";
+import Banner from '@/components/banner/Banner';
+import Filter from '@/components/filter/Filter';
 
 const Category = () => {
   const params = useParams();
@@ -26,6 +28,8 @@ const Category = () => {
 
   return (
     <div className={styles.container}>
+      <Banner/>
+      <Filter/>
       <CardList products={products} />
     </div>
   );
