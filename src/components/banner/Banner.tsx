@@ -9,7 +9,7 @@ const Banner = () => {
         <div className={styles.textBox}>
             <div className={styles.heading}>
                 <h1 className={styles.title}>Elevate Your Style in the Women&apos;s Wardrobe Wonderland</h1>
-                <p className={styles.desc}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae dolorem accusamus eum iusto iure quisquam?</p>
+                <p className={styles.desc}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae dolorem accusamus eum iusto iure quisquam</p>
             <button className={styles.ctaBtn}>Get Started</button>
             </div>
         </div>
