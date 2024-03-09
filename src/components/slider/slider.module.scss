@@ -30,6 +30,7 @@
             top: 50%;
             transform: translate(0, -50%);
             border-radius: 20px;
+            // width: 25vw;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -39,13 +40,11 @@
             margin-left: 20px;
             @include respond(laptop){
                 width: max-content;
-                margin: auto;
-                padding: 2rem 1rem;
+                padding: .25rem;
                 margin-left: 20px; 
                 top: 12rem;
                 transform: translate(0, 0);
                 gap: .2rem;
-
             }
             .featuredCategory{
                 font-weight: 300;
@@ -57,6 +56,9 @@
                 font-weight: 300;
                 font-size: 1.6rem;
                 color: rgb(255, 254, 254);
+                @include respond(laptop){
+                display: none;
+                }
             }
             .offer{
                 font-weight: bold;
