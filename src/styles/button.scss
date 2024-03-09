@@ -1,13 +1,13 @@
 @import "./variables.scss";
 
 .utilsBtn{
-    padding: 16px 40px;
+    padding: 1.6rem 4.0rem;
     cursor: pointer;
     border: none;
     color: $color-white;
     border-radius: 1.5rem;
     width: max-content;
-    font-size: 14px;
+    font-size: 1.4rem;
     transition: .3s ease;
     &:disabled{
         opacity: .8;
@@ -33,5 +33,5 @@
     background-color: transparent;
     color: #000;
     font-weight: bold;
-    border: 1px solid grey;
+    border: .1rem solid grey;
 }
