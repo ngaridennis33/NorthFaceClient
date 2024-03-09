@@ -19,16 +19,19 @@ const Slider = () => {
     <div className={styles.slider}>
         <div className={styles.container} style={{transform:`translateX(-${currSlide  * 100}vw)`}}>
         {CategoriesData.map((category, index) => (
-                
-                <div key={index} style={{background:`${category.bg}`}}>
-
+                <div key={index} className={styles.wrapper}>
                 <Image
                     className={styles.img}
                     src={category.img}
                     alt={category.label}
-                    width={1000}
-                    height={1000}
-                    />
+                    width={500}
+                    height={500}
+                />
+                <div className={styles.textWrapper} style={{background:`${category.bg}`}}>
+                        <span className={styles.featuredCategory}>{category.label}</span>
+                        <span className={styles.offer}> 50% OFF </span>
+                        <button className={styles.ctaBtn}>View Offer</button>
+                </div>
                     </div>
             ))}
         </div>

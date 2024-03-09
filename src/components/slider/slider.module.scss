@@ -1,4 +1,5 @@
 @import "../../styles/responsive.scss";
+@import "../../styles/button.scss";
 
 .slider{
     height: calc(100vh - 100px);
@@ -9,19 +10,64 @@
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
+
     .container{
         width:max-content;
         height: 100%;
         display: flex;
         transition: all 1s ease;
+        .wrapper{
             .img{
                 height:100%;
                 width: 100vw;
-                object-fit: contain;
+                object-fit: cover;
                 @include respond(laptop){
                     object-fit: cover;
                 }
             }
+        .textWrapper{
+            color: rgb(20, 92, 41);
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            border-radius: 20px;
+            width: 25vw;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+            padding: 5rem;
+            margin-left: 20px;
+            @include respond(laptop){
+                width: max-content;
+                margin: auto;
+                padding: 2rem 1rem;
+                margin-left: 20px; 
+                top: 12rem;
+                transform: translate(0, 0);
+                gap: .2rem;
+
+            }
+            .featuredCategory{
+                font-weight: 300;
+                color: rgb(255, 254, 254);
+                font-size: 3rem;
+                text-transform: capitalize;
+
+            }
+            .offer{
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                font-size: 3rem;
+                text-transform: capitalize;
+
+            }
+            
+        }
+
+        }
+        
     }
 
     .iconWrapper{

@@ -278,13 +278,13 @@ export const CategoriesData = [
         label: "Women's",
         link:"/womens-scale", 
         img:"/banner.jpg",
-        bg:"linear-gradient(90deg, rgba(2,0,36,.7) 0%, rgba(121,9,111,0.8435749299719888) 35%, rgba(0,212,255,.1) 100%)",
+        bg:"rgb(228,63,45,.7)",
     },
     {
         label: "Mens's",
         link:"/mens-scale", 
         img:"/catmen.jpg",
-        bg:"linear-gradient(90deg, rgba(2,0,36,.1) 0%, rgba(121,9,111,0.8435749299719888) 35%, rgba(0,212,255,.1) 100%)",
+        bg:"linear-gradient(90deg, rgba(2,0,36,.1) 0%, rgba(121,9,111,0.8435749299719888",
     },
     {
         label: "kid's",
@@ -296,7 +296,7 @@ export const CategoriesData = [
         label: "Accessories's",
         link:"/accessories-scale", 
         img:"/accessories.jpg",
-        bg:"#000",
+        bg:"rgb(47, 241, 255,.8)",
     },
     {
         label: "Bags and Gear's",
@@ -308,7 +308,7 @@ export const CategoriesData = [
         label: "Women's footwear",
         link:"/womens-scale", 
         img:"/catwomenshoes.jpg",
-        bg:"#000",
+        bg:"rgb(20, 92, 41,.6)",
     },
     {
         label: "Men's footwear",
