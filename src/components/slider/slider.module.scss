@@ -26,18 +26,16 @@
                 }
             }
         .textWrapper{
-            color: rgb(20, 92, 41);
             position: absolute;
             top: 50%;
             transform: translate(0, -50%);
             border-radius: 20px;
-            width: 25vw;
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: center;
             gap: 3rem;
-            padding: 5rem;
+            padding: .5rem;
             margin-left: 20px;
             @include respond(laptop){
                 width: max-content;
@@ -54,7 +52,11 @@
                 color: rgb(255, 254, 254);
                 font-size: 3rem;
                 text-transform: capitalize;
-
+            }
+            .text{
+                font-weight: 300;
+                font-size: 1.6rem;
+                color: rgb(255, 254, 254);
             }
             .offer{
                 font-weight: bold;

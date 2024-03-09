@@ -30,6 +30,7 @@ const Slider = () => {
                 <div className={styles.textWrapper} style={{background:`${category.bg}`}}>
                         <span className={styles.featuredCategory}>{category.label}</span>
                         <span className={styles.offer}> 50% OFF </span>
+                        <span className={styles.text}>🎉 Exclusive Offer! Limited Time Only! 🎁 </span>
                         <button className={styles.ctaBtn}>View Offer</button>
                 </div>
                     </div>
