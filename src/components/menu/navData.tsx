@@ -284,13 +284,13 @@ export const CategoriesData = [
         label: "Mens's",
         link:"/mens-scale", 
         img:"/catmen.jpg",
-        bg:"#000",
+        bg:"linear-gradient(90deg, rgba(2,0,36,.1) 0%, rgba(121,9,111,0.8435749299719888) 35%, rgba(0,212,255,.1) 100%)",
     },
     {
         label: "kid's",
         link:"/kids-scale", 
         img:"/catkids.jpg",
-        bg:"linear-gradient(90deg, rgba(2,0,36,.1) 0%, rgba(121,9,111,0.8435749299719888) 35%, rgba(0,212,255,1) 100%)",
+        bg:"linear-gradient(90deg, rgba(2,0,36,.1) 0%, rgba(121,9,111,0.2435749299719888) 35%, rgba(0,212,255,1) 100%)",
     },
     {
         label: "Accessories's",

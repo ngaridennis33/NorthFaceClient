@@ -26,7 +26,7 @@ const Slider = () => {
                     className={styles.img}
                     src={category.img}
                     alt={category.label}
-                    width={500}
+                    width={1000}
                     height={1000}
                     />
                     </div>

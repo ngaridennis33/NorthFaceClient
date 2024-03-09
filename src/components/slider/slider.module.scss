@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .slider{
     height: calc(100vh - 100px);
     width: 100vw;
@@ -8,9 +10,6 @@
     background-position: top left;
     background-size: cover;
     .container{
-
-        border-radius: 0px 0px 200px 0px;
-        width: 80%;
         width:max-content;
         height: 100%;
         display: flex;
@@ -19,9 +18,10 @@
                 height:100%;
                 width: 100vw;
                 object-fit: contain;
+                @include respond(laptop){
+                    object-fit: cover;
+                }
             }
-        
-        
     }
 
     .iconWrapper{
