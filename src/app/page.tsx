@@ -1,6 +1,7 @@
 import Accordion from "@/components/accordion/Accordion";
 import CardList from "@/components/cardList/CardList";
 import { CardData } from "@/components/cardList/cardData";
+import CatGallery from "@/components/catGallery/CatGallery";
 import Corousel from "@/components/corousel/Corousel2";
 // import Corousel from "@/components/carousel/Corousel";
 import Filter from "@/components/filter/Filter";
@@ -14,7 +15,7 @@ const Home = () => {
       <Slider/>
       <Filter/>
       <Corousel/>
-      {/* <Corousel/> */}
+      <CatGallery/>
       <CardList products={CardData}/>
       {/* <Accordion/> */}
     </div>

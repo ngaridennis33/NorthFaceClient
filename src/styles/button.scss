@@ -5,8 +5,9 @@
     cursor: pointer;
     border: none;
     color: $color-white;
-    border-radius: 1.5rem;
-    width: max-content;
+    border-radius: 15px;
+    width: fit-content;
+    // min-width: 100px;
     font-size: 1.4rem;
     transition: .3s ease;
     &:disabled{
@@ -34,4 +35,8 @@
     color: #000;
     font-weight: bold;
     border: .1rem solid grey;
+}
+
+.catBtn{
+    @extend .utilsBtn;
 }
