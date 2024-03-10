@@ -1,17 +1,30 @@
 @import "../../styles/button.scss";
+@import "../../styles/responsive.scss";
+
 .container{
     display: flex;
     height: 80vh;
     gap: 10px;
     margin: 10px;
+    @include respond(laptop){
+        flex-direction: column;
+        height: fit-content;
+    }
     .col{
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 10px;
+        @include respond(laptop){
+            flex-direction: row;
+        }
+        
     }
     .col_l{
         flex: 2;
+        @include respond(laptop){
+            flex: 1;
+        }
     }
 
     .row{
@@ -20,6 +33,9 @@
         gap: 10px;
         overflow: hidden;
         position: relative;
+        @include respond(laptop){
+            flex-direction: column;
+        }
         .catBtn{
             position: absolute;
             min-width: 100px;
