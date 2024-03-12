@@ -5,7 +5,8 @@ import styles from "./page.module.scss";
 import { useParams } from 'next/navigation';
 import { CardData } from '@/components/cardList/cardData';
 import ProductDetail from '@/components/productDetail/ProductDetail';
-// import CardList from '@/components/cardList/CardList';
+import CardList from '@/components/cardList/CardList';
+
 
 
 const SinglePage = () => {
@@ -24,7 +25,7 @@ const product = CardData.filter(item => item.slug === slug)[0];
   return (
     <div className={styles.container}>
       <ProductDetail product={product}/>
-      {/* <CardList type="Similar" products={CardData}/> */}
+      <CardList type="Similar" products={CardData}/>
     </div>
   );
 };
