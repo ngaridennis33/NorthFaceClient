@@ -65,7 +65,7 @@ export const NavBarData = [
         },
         {
             label:"Kids' Sale",
-            link:"kid's-sale",
+            link:"/kid's-sale",
             branches:null,
         },
         {
@@ -75,7 +75,7 @@ export const NavBarData = [
         },
         {
             label:"Women's Footwear Sale",
-            link:"women-footwear-sale",
+            link:"/women-footwear-sale",
             branches:null,
         },
         {
@@ -248,18 +248,18 @@ export const NavBarData = [
     },
     {
     label: "Bags & Gear",
-    link: "bags-and-gear",
+    link: "/bags-and-gear",
     tree:null,
 
     },
     {
     label: "Renewed",
-    link: "renewed",
+    link: "/renewed",
     tree:null,
     },
     {
     label: "About Us",
-    link: "about-us",
+    link: "/about-us",
     tree:null,
     },
 ];
