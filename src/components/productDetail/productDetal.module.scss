@@ -1,0 +1,9 @@
+@import "../../styles/responsive.scss";
+
+.wrapper{
+    display: flex;
+    gap: 20px;
+    @include respond(laptop){
+        flex-direction: column;
+    }
+}
