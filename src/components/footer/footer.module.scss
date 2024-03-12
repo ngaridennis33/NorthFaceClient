@@ -1,0 +1,64 @@
+@import "../../styles/responsive.scss";
+
+.container{
+    margin: 100px 0 20px 0;
+    .top{
+        display: flex;
+        gap: 50px;
+        .item{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: justify;
+            font-size: 14px;
+            @include respond(laptop){
+                align-items: center;
+            }
+            &.text{
+                @include respond(laptop){
+                    display: none;
+                }
+            }
+            .title{
+                font-size: 18px;
+                font-weight: bold;
+                color:#555 ;
+            }
+            .link{
+                .links{
+                    color: rgb(82, 80, 80);
+                    &:hover{
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+        @include respond(laptop){
+            flex-direction: column;
+        }
+        .left{
+            display: flex;
+            align-items: center;
+            .copyright {
+                margin-left: 20px;
+                color: grey;
+                font-size: 12px;
+            }
+
+        }
+        .right{
+            .img{
+                height: 50px;
+            }
+
+        }
+    }
+}
