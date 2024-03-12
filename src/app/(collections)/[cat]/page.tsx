@@ -54,7 +54,7 @@ const Category = () => {
       <Banner/>
       <Filter/>
       <hr />
-      <CardList products={products} type={cat}/>
+      <CardList products={products} type={cat || 'All'}/>
     </div>
   );
 };
