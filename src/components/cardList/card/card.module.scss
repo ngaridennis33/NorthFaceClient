@@ -42,11 +42,11 @@
             }
 
             .iconLeft + .imgContainer .img{
-                animation: slideInFromLeft .2s forwards ;
-            }
-
-            .iconRight + .imgContainer .img{
                 animation: slideInFromRight .2s forwards ;
+            }
+            
+            .iconRight + .imgContainer .img{
+                animation: slideInFromLeft .2s forwards ;
             }
 
             .imgContainer{
