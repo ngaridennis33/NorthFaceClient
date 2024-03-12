@@ -1,8 +1,14 @@
-    .right{
+   @import "../../styles/responsive.scss";
+
+   .right{
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 10px;
+        @include respond(laptop){
+            padding: 2rem;
+        }
+
         .label{
             font-weight: bold;
             font-size: 20px;
@@ -12,7 +18,7 @@
             font-weight: 500;
             color: #2879fe;
             display: flex;
-            gap: 5px;
+            gap: 2rem;
             .prevPrice{
                 color: rgb(192, 13, 13);
                 text-decoration: line-through;
@@ -26,7 +32,10 @@
         .quantity{
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
+            @include respond(laptop){
+                margin: 20px 0 20px 0;
+            }
             .pButton{
                 width: 50px;
                 height: 50px;
@@ -35,6 +44,7 @@
                 justify-content: center;
                 cursor: pointer;
                 background-color: rgb(209, 209, 209);
+                
             }
         }
        
@@ -60,9 +70,17 @@
             color: #fff;
             display: flex;
             align-items: center;
+            border-radius: 10px;
             gap: 20px;
             cursor: pointer;
             font-weight: 500;
+            @include respond(laptop){
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
         .links{
             display: flex;

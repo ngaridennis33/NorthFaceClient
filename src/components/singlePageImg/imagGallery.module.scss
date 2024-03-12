@@ -40,7 +40,7 @@
     .mainImg{
         flex: 5;
         width:fit-content;
-        height:fill ;
+        height:100% ;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -51,9 +51,12 @@
     
         .imgBig{
             width: 100%;
-            height: 45rem;
-            max-height: 800px;
+            height: 80rem;
             object-fit: cover;
+            @include respond(laptop){
+                width: 100%;
+                height: 45rem;
+            }
         }
     }
 
