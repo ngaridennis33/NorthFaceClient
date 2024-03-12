@@ -11,7 +11,7 @@ interface ImageGalleryProps {
     product: Item;
 }
 
-const ImageGallery = ({ product }: ImageGalleryProps)  => {
+const SinglePageImageGallery = ({ product }: ImageGalleryProps)  => {
     const [selectedImg, setSelectedImg] = useState(0);
     
     // Show the Images on mobile screen.
@@ -70,4 +70,4 @@ const ImageGallery = ({ product }: ImageGalleryProps)  => {
   )
 }
 
-export default ImageGallery
+export default SinglePageImageGallery

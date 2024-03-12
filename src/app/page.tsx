@@ -18,7 +18,7 @@ const Home = () => {
       <Corousel/>
       <CatGallery/>
       <CardList products={CardData} type="Featured"/>
-      <CardList products={CardData} type="Top Sales"/>
+      {/* <CardList products={CardData} type="Top Sales"/> */}
       <Footer/>
     </div>
   )

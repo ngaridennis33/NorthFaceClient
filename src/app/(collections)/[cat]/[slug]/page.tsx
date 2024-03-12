@@ -4,8 +4,8 @@ import React, { Suspense, useState } from 'react';
 import styles from "./page.module.scss";
 import { useParams } from 'next/navigation';
 import { CardData } from '@/components/cardList/cardData';
-import ImageGallery from '@/components/ImageGallery/ImageGallery';
 import ProductDetails from '@/components/productDetails/ProductDetails';
+import SinglePageImageGallery from '@/components/ImageGallery/ImageGallery';
 
 
 const SinglePage = () => {
@@ -23,7 +23,7 @@ const product = CardData.filter(item => item.slug === slug)[0];
 
   return (
     <div className={styles.container}>
-      <ImageGallery product={product}/>
+      <SinglePageImageGallery product={product}/>
       <ProductDetails product={product}/>
     </div>
   );
