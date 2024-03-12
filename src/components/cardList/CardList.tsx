@@ -1,3 +1,4 @@
+import React from 'react';
 import { Item } from '@/types'
 import Card from './card/Card'
 import styles from "./cardList.module.scss"
