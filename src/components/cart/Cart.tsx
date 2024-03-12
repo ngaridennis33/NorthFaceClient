@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from "./cart.module.scss";
-import { Item } from '@/types';
 import Image from 'next/image';
 import { DeleteIcon } from '../icons/Icons';
 

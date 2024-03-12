@@ -7,4 +7,5 @@ export interface Item {
     prevPrice: string;
     currPrice: string;
     color: string[];
+    isNew?:boolean;
 }

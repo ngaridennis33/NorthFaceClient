@@ -3,7 +3,6 @@
     max-width: 300px;
     @include respond(laptop){
         width: 180px;
-        padding:5px;
     }
     .wrapper{
         width: 100%;
@@ -11,12 +10,15 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;
+        margin-bottom: 10px;
         .card{
             width: 100%;
-            height: 400px;
+            height: 25rem;
             position: relative;
             display: flex;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             &:hover .icon{
                 opacity: 1;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -49,40 +51,17 @@
 
             .imgContainer{
                 width: 100%;
+                height: 100%;
                 position: relative;
-                overflow: hidden;
-
                 .img{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     @include respond(laptop){
-                        object-fit:contain;
+                        object-fit:cover;
                     }
                 }
             }
-
-            .imgpos{
-                position: absolute;
-                bottom: 5px;
-                left: 50%;
-                transform: translateX(-50%);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 2px;
-                border-radius: 15px;
-                background-color: rgba(161, 161, 161, 0.5);
-                .pos{
-                    width: 15px;
-                    margin-left: 10px;
-                    height: 15px;
-                    border-radius: 50%;
-                    border: 1px solid #ffffff;
-                }
-            }
-
-
             .text{
                 background-color: #ebf7fa;
                 position: absolute;
@@ -100,12 +79,14 @@
         .desc{
             font-size: 16px;
             font-weight: 300;
+            padding: 0 10px;
         }
 
         .bottom{
             display: flex;
             width: 100%;
             justify-content: space-between;
+            padding: 0 10px;
             .price{
                 display: flex;
                 gap: 5px;
@@ -129,14 +110,16 @@
             border-top: 1px solid grey;
             display: flex;
             width: 100%;
-            gap: 5px;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
 
             .color{
                 margin-top: 10px;
                 border-radius: 50%;
                 width: 20px;
                 height: 20px;
-                border: 1px solid grey;
+                cursor: pointer;
             }
         }
     }

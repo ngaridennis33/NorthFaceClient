@@ -6,6 +6,7 @@ export const CardData: Item[] = [
         slug:"mens-Lhotse-1",
         label:"Men’s Lhotse Reversible Hoodie",
         category:"black-friday-sale",
+        isNew:true,
         img:[
             "/catwomen.jpg",
             "/catkids.jpg",
@@ -26,6 +27,7 @@ export const CardData: Item[] = [
         slug:"mens-Lhotse-2",
         label:"Women’s Lhotse Reversible Jacket",
         category:"womens",
+        isNew:true,
         img:[
             "/catkids.jpg",
             "/catmen.jpg",
@@ -145,6 +147,7 @@ export const CardData: Item[] = [
         slug:"mens-Lhotse-7",
         label:"Men’s Lhotse Reversible Hoodie",
         category:"renewed",
+        isNew:true,
         img:[
             "/catkids.jpg",
             "/catwomenshoes.jpg",

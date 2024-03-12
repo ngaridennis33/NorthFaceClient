@@ -4,12 +4,13 @@ import styles from "./cardList.module.scss"
 
 interface CardListProductProps{
   products: Item[];
+  type:string;
 }
-const CardList = ({products}:CardListProductProps) => {
+const CardList: React.FC<CardListProductProps> = ({ products, type }) => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        <h1> Featured Products</h1>
+        <h1> {type} Products</h1>
       </div>
         <div className={styles.wrapper}>
           {products && products.map((items)=>(
