@@ -1,6 +1,7 @@
 import styles from "./layout.module.scss"
 import { ReactNode } from "react"
 import NavBar from "@/components/menu/navBar/NavBar"
+import Footer from "@/components/footer/footer"
 
 const Layout = ({children}:{children:ReactNode}) => {
     return (
@@ -10,6 +11,7 @@ const Layout = ({children}:{children:ReactNode}) => {
             <div className={styles.wrapper}>
             {children}
             </div>
+            <Footer/>
         </div>
     )
 }

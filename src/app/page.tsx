@@ -18,7 +18,6 @@ const Home = () => {
       <Corousel/>
       <CatGallery/>
       <CardList products={CardData}/>
-      {/* <Accordion/> */}
       <Footer/>
     </div>
   )
