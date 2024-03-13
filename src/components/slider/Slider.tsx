@@ -18,7 +18,7 @@ const Slider = () => {
     }
 
     const handleSwipe = useCallback(({ deltaX, deltaY }: { deltaX: number, deltaY: number }) => {
-        if (Math.abs(deltaX) > 0) {
+        if (deltaX > 0) {
             prevSlide();
         } else if (deltaX < 0) {
             nextSlide();
