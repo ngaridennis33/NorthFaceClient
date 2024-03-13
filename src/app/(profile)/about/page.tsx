@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styles from "./page.module.scss";
 
 const About = () => {
@@ -24,7 +24,7 @@ const About = () => {
                 <section className={styles.commitment}>
                     <h2>Our Commitment</h2>
                     <p>
-                        We're more than just a marketplace; we're a community. We are dedicated to making a positive impact on the planet and supporting the artisans and creators who bring their products to you.
+                        We&apos;re more than just a marketplace; we&apos;re a community. We are dedicated to making a positive impact on the planet and supporting the artisans and creators who bring their products to you.
                     </p>
                 </section>
 
@@ -45,7 +45,7 @@ const About = () => {
                 <section className={styles.join}>
                     <h2>Join Our Journey</h2>
                     <p>
-                        As we look to the future, we're excited to continue this journey with you, bringing you an even more personalized shopping experience.
+                        As we look to the future, we&apos;re excited to continue this journey with you, bringing you an even more personalized shopping experience.
                     </p>
                 </section>
             </main>
