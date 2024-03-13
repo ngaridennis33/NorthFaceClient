@@ -1,5 +1,6 @@
 @import "../../styles/button.scss";
 @import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
 
 .container{
     display: flex;
@@ -22,43 +23,57 @@
     }
     .col_l{
         flex: 2;
-        @include respond(laptop){
-            flex: 1;
-        }
     }
-
     .row{
         flex: 1;
         display: flex;
         gap: 10px;
         overflow: hidden;
-        position: relative;
         @include respond(laptop){
             flex-direction: column;
         }
-        .catBtn{
-            position: absolute;
-            min-width: 100px;
-            background-color: #fff;
-            width: fit-content;
-            height: 50px;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            color: #000;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: 500;
-
-        }
-        .img{
+    }
+        .imgContainer{
+            position: relative;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            background-color: rgb(153, 153, 153);
+            .overlay{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                visibility: hidden;
+                transition: .3s ease-in-out;
+            }
+            .img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                background-color: $color-grey-dark;
+            }
+            .catBtn{
+                position: absolute;
+                min-width: 100px;
+                background-color: #fff;
+                width: fit-content;
+                height: 50px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                color: #000;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
 
+            &:hover{
+                .overlay {
+                background-color: $color-overlay;
+                visibility: visible;
+            }
         }
     }
 }
