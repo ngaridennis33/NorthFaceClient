@@ -10,6 +10,7 @@
     background-color: #fff;
 
     .topNav{
+        height: 5rem;
         @include respond(laptop){
             display: none;
         }
@@ -17,14 +18,14 @@
 
     .box{
         width: 100%;
-        height: 50px;
+        height: 5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family:helvetica-neue-lt, sans-serif;
 
         @include respond(laptop){
-                height: 100px;
+                height: 10rem;
             }
         .deskTopwrapper{
             width: 80%;
@@ -60,7 +61,7 @@
             display: none;
             @include respond(laptop){
                 display: flex;
-                padding: 0 20px;
+                padding: 0 2rem;
                 width: 100%;
                 height: 100%;
                 justify-content: space-between;
@@ -70,7 +71,7 @@
                 .right{
                     display: flex;
                     align-items: center;
-                    gap: 30px;
+                    gap: 3rem;
                 }
 
                 .mobileLinks {
@@ -78,8 +79,8 @@
                     z-index: 1000;
                     background-color: #fff;
                     left: 0;
-                    top: 100px;
-                    max-height: calc(100vh - 100px); /* Adjust the value accordingly */
+                    top: 10rem;
+                    max-height: calc(100dvh - 10rem); /* Adjust the value accordingly */
                     width: 100%;
                     overflow-y: auto;
                     transition: .15s ease-in;
