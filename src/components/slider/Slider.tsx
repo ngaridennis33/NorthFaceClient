@@ -1,9 +1,10 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import styles from "./slider.module.scss"
 import { CategoriesData } from '../menu/navData'
 import Image from 'next/image'
+import { MobileSwipper } from '../mobile-sipper/MobileSwiper'
 
 const Slider = () => {
     const [currSlide, setcurrSlide] = useState(0);
@@ -15,7 +16,18 @@ const Slider = () => {
     const nextSlide=()=>{
         setcurrSlide(currSlide === numSlides ? 0 : (prev) => prev + 1 )
     }
+
+    const handleSwipe = useCallback(({ deltaX, deltaY }: { deltaX: number, deltaY: number }) => {
+        if (Math.abs(deltaX) > 0) {
+            prevSlide();
+        } else if (deltaX < 0) {
+            nextSlide();
+        }
+        console.log(currSlide)
+    }, [prevSlide, nextSlide]);
+
   return (
+    <MobileSwipper onSwipe={handleSwipe}>
     <div className={styles.slider}>
         <div className={styles.container} style={{transform:`translateX(-${currSlide  * 100}vw)`}}>
         {CategoriesData.map((category, index) => (
@@ -46,9 +58,8 @@ const Slider = () => {
         <svg width={40} height={40} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="Layer 2" id="Layer_2"><path fill='#000' d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z"/></g></svg>
         </div>
         </div>
-
-        
     </div>
+    </MobileSwipper>
   )
 }
 
