@@ -259,7 +259,7 @@ export const NavBarData = [
     },
     {
     label: "About Us",
-    link: "/about-us",
+    link: "/about",
     tree:null,
     },
 ];
@@ -537,18 +537,18 @@ export const NavBarDataMobile:NavBarDataMobileItem[] = [
     },
     {
     label: "Bags & Gear",
-    link: "bags-and-gear",
+    link: "/bags-and-gear",
     tree:null,
 
     },
     {
     label: "Renewed",
-    link: "renewed",
+    link: "/renewed",
     tree:null,
     },
     {
     label: "About Us",
-    link: "about-us",
+    link: "/about",
     tree:null,
     },
 ];

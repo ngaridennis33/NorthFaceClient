@@ -1,0 +1,57 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .story,
+  .values,
+  .commitment,
+  .connect,
+  .contact,
+  .join {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  
+    h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #666;
+    }
+  }
+  
+  // Responsive design adjustments
+  @media (max-width: 768px) {
+    .main {
+      padding: 1rem;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .story,
+    .values,
+    .commitment,
+    .connect,
+    .contact,
+    .join {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
