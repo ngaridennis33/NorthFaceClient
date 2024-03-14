@@ -26,7 +26,9 @@ useEffect(() => {
     e.preventDefault();
     const endX = e.changedTouches[0].clientX;
     const deltaX = endX - startX;
-    onSwipe({ deltaX });
+    if (Math.abs(deltaX) > 50) { // Minimum swipe distance threshold
+      onSwipe({ deltaX });
+    }
   };
 
   window.addEventListener("touchstart", handleTouchStart);
