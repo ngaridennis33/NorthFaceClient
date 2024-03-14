@@ -16,20 +16,21 @@ const Corousel = () => {
   const handleClick = (direction: 'left' | 'right') => {
     setIsMoved(true);
     if (listRef.current) {
-      const slideWidthPercentage = 100;
-      const maxSlides = CardData.length/4;
-  
-      if (direction === 'left' && slideIndex > 0) {
-        const translateValue = (slideIndex - 1) * -slideWidthPercentage;
-        setSlideNumber(slideIndex - 1);
+        const slideWidthPercentage = 100;
+        const maxSlides = Math.ceil(CardData.length / 4);
+        let nextSlideIndex = slideIndex;
+
+        if (direction === 'left' && slideIndex > 0) {
+            nextSlideIndex = slideIndex - 1;
+        } else if (direction === 'right' && slideIndex < maxSlides - 1) {
+            nextSlideIndex = slideIndex + 1;
+        }
+
+        const translateValue = nextSlideIndex * -slideWidthPercentage;
+        setSlideNumber(nextSlideIndex);
         listRef.current.style.transform = `translateX(${translateValue}%)`;
-      } else if (direction === 'right' && slideIndex < maxSlides - 1) {
-        const translateValue = (slideIndex + 1) * -slideWidthPercentage;
-        setSlideNumber(slideIndex + 1);
-        listRef.current.style.transform = `translateX(${translateValue}%)`;
-      }
     }
-  };
+};
 
   const handleSwipe = useCallback(({ deltaX }: { deltaX: number }) => {
     const slideWidthPercentage = 100;
@@ -53,7 +54,7 @@ const Corousel = () => {
         <h1>Black Friday Sale</h1>
       </div>
     <div className={styles.wrapper}>
-      <div className={styles.handle} onClick={() => handleClick('left')} style={{left:".5rem"}}>
+    <div className={styles.handle} onClick={() => handleClick('left')} style={{left:".5rem", display:!isMoved ? "none": "block"}}>
         <LeftIcon/>
       </div>
       <div className={styles.slider} ref={listRef}>
