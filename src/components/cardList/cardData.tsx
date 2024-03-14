@@ -16,7 +16,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#98C8DC",
             "#999",
             "#e4e4",
             "#80e3"
@@ -37,7 +37,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#F5EFEA",
             "#999",
             "#e4e4",
             "#80e3"
@@ -57,7 +57,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#FF9900",
             "#999",
             "#e4e4",
             "#80e3"
@@ -77,7 +77,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#B177DB",
             "#999",
             "#e4e4",
             "#80e3"
@@ -96,7 +96,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#635BFF",
             "#999",
             "#e4e4",
             "#80e3"
@@ -116,7 +116,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#C22BAF",
             "#999",
             "#e4e4",
             "#80e3"
@@ -136,7 +136,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#EC2426",
             "#999",
             "#e4e4",
             "#80e3"
@@ -157,7 +157,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#E7F9FE",
             "#999",
             "#e4e4",
             "#80e3"
@@ -177,7 +177,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#FB0719",
             "#999",
             "#e4e4",
             "#80e3"
@@ -197,7 +197,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#FDECF0",
             "#999",
             "#e4e4",
             "#80e3"
@@ -217,7 +217,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#1A814A",
             "#999",
             "#e4e4",
             "#80e3"
@@ -237,7 +237,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#65B4D3",
             "#999",
             "#e4e4",
             "#80e3"
@@ -257,7 +257,7 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#E94E22",
             "#999",
             "#e4e4",
             "#80e3"
@@ -277,7 +277,48 @@ export const CardData: Item[] = [
         prevPrice:"280.00",
         currPrice:"196.00",
         color:[
-            "#000",
+            "#FF9900",
+            "#999",
+            "#e4e4",
+            "#80e3"
+        ]
+    },
+    {
+        id:14,
+        slug:"mens-Lhotse-1",
+        label:"Men’s Lhotse Reversible Hoodie",
+        category:"black-friday-sale",
+        isNew:true,
+        img:[
+            "/catwomen.jpg",
+            "/catkids.jpg",
+            "/catmen.jpg",
+            "/catwomenshoes.jpg",
+        ],
+        prevPrice:"280.00",
+        currPrice:"196.00",
+        color:[
+            "#98C8DC",
+            "#999",
+            "#e4e4",
+            "#80e3"
+        ]
+    },
+    {
+        id:15,
+        slug:"mens-Lhotse-9",
+        label:"Men’s Lhotse Reversible Hoodie",
+        category:"men's",
+        img:[
+            "/catkids.jpg",
+            "/catwomen.jpg",
+            "/catmen.jpg",
+            "/catwomenshoes.jpg",
+        ],
+        prevPrice:"280.00",
+        currPrice:"196.00",
+        color:[
+            "#FDECF0",
             "#999",
             "#e4e4",
             "#80e3"

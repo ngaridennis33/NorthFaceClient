@@ -51,7 +51,7 @@ const Corousel = () => {
     <MobileSwipper onSwipe={handleSwipe}>
     <div className={styles.container}>
       <div className={styles.title}>
-        <h1>Black Friday Sale</h1>
+        <h1>Popular Items</h1>
       </div>
     <div className={styles.wrapper}>
     <div className={styles.handle} onClick={() => handleClick('left')} style={{left:".5rem", display:!isMoved ? "none": "block"}}>
@@ -60,8 +60,8 @@ const Corousel = () => {
       <div className={styles.slider} ref={listRef}>
       {CardData.map((items)=>(
         <Link href={`/${items.category}`} key = {items.id} className={styles.imgLink}>
-          <Image className={styles.img} width={500} height={500} alt = ""src={items.img[0]}/>
-          <div className={styles.bg}></div>
+          <Image className={styles.img} width={500} height={500} alt = ""src={items.img[0]} style={{background:items.color[0]}}/>
+          <div className={styles.bg} ><span>{items.category}</span></div>
         </Link>
         ))}
       </div>
