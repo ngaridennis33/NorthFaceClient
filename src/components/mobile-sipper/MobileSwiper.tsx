@@ -1,47 +1,43 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 
 interface MobileSwipperProps {
   children: React.ReactNode;
-  onSwipe: (delta: { deltaX: number}) => void;  
+  onSwipe: (delta: { deltaX: number }) => void;
 }
-export const MobileSwipper = ({children, onSwipe}: MobileSwipperProps ) => {
-  const wrapperRef = useRef<HTMLDivElement>(null); 
+
+export const MobileSwipper = ({ children, onSwipe }: MobileSwipperProps) => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const [startX, setStartX] = useState(0);
 
-useEffect(() => {
-  const handleTouchStart = (e: TouchEvent) => {
-    if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
-      return;
-    }
-    e.preventDefault();
-    setStartX(e.touches[0].clientX);
-  };
+  useEffect(() => {
+    const handleTouchStart = (e: TouchEvent) => {
+      if (!wrapperRef.current || !wrapperRef.current.contains(e.target as Node)) {
+        return;
+      }
+      setStartX(e.touches[0].clientX);
+    };
 
-  const handleTouchEnd = (e: TouchEvent) => {
-    if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
-      return;
-    }
-    e.preventDefault();
-    const endX = e.changedTouches[0].clientX;
-    const deltaX = endX - startX;
-    if (Math.abs(deltaX) > 50) { // Minimum swipe distance threshold
-      onSwipe({ deltaX });
-    }
-  };
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (!wrapperRef.current || !wrapperRef.current.contains(e.target as Node)) {
+        return;
+      }
+      const endX = e.changedTouches[0].clientX;
+      const deltaX = endX - startX;
+      if (Math.abs(deltaX) > 50) { // Minimum swipe distance threshold
+        onSwipe({ deltaX });
+      }
+    };
 
-  window.addEventListener("touchstart", handleTouchStart);
-  window.addEventListener("touchend", handleTouchEnd);
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
 
-  return () => {
-    window.removeEventListener("touchstart", handleTouchStart);
-    window.removeEventListener("touchend", handleTouchEnd);
-  };
-}, [startX, onSwipe]);
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [startX, onSwipe]);
 
-
-  return (
-    <div ref={wrapperRef}>{children}</div>
-  )
-}
+  return <div ref={wrapperRef}>{children}</div>;
+};
