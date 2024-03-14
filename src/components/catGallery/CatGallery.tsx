@@ -6,6 +6,8 @@ import Link from 'next/link';
 const CatGallery = () => {
   return (
     <div className={styles.container}>
+      <h1 className={styles.title}> Categories</h1 >
+      <div className={styles.wrapper}>
       <div className={styles.col}>
         <div className={styles.row}>
           <div className={styles.imgContainer}>
@@ -60,6 +62,7 @@ const CatGallery = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
