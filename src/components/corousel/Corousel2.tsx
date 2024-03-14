@@ -33,6 +33,7 @@ const Corousel = () => {
 };
 
   const handleSwipe = useCallback(({ deltaX }: { deltaX: number }) => {
+    setIsMoved(true);
     const slideWidthPercentage = 100;
     const maxSlides = Math.ceil(CardData.length / 4);
 
