@@ -3,7 +3,7 @@
 @import "../../styles/variables.scss";
 
 .container{
-    // flex-direction: column;
+    flex-direction: column;
     margin-top: 3rem;
     border-top: 1px solid rgb(187, 184, 184);
     .title{
@@ -11,10 +11,6 @@
         font-weight: 500;
         padding: 1rem;
     }
-    .box{
-        display: flex;
-    .left{
-        flex: 3;
 .wrapper{
     display: flex;
     height: 80vh;
@@ -94,10 +90,5 @@
             }
         }
     }
-}
-}
-}
-.right{
-    flex: 1;
 }
 }

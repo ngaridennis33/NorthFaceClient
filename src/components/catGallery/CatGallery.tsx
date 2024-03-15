@@ -7,8 +7,6 @@ const CatGallery = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1 >
-      <div className={styles.box}>
-      <div className={styles.left}>
       <div className={styles.wrapper}>
       <div className={styles.col}>
         <div className={styles.row}>
@@ -76,11 +74,6 @@ const CatGallery = () => {
           </div>
         </div>
       </div>
-    </div>
-    </div>
-    <div className={styles.right}>
-      <span>right</span>
-    </div>
     </div>
     </div>
   );
