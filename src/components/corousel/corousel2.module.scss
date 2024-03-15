@@ -3,6 +3,7 @@
 .container{
     display: flex;
     flex-direction: column;
+    border-top: 1px solid rgb(187, 184, 184);
 
     .title{
         padding: 10px ;
@@ -45,19 +46,34 @@
             }
             .bg{
                 width: 70%;
+                text-align: center;
                 position: absolute;
-                height: 5rem;
                 display: flex;
                 align-items: center;justify-content: center;
-                border-radius: 20px;
                 bottom: 1rem;
+                gap: 1rem;
                 transform: translateX(-50%);
                 left: 50%;
-                background-color: #000;
                 color: #fff;
-                @include respond(laptop){
-                   display: none;
+                display: flex;
+                flex-direction: column;
+                .label{
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                    background-color: rgb(128, 128, 128,.7);
+                    @include respond(laptop){
+                        display: none;
+                     }
                 }
+                .price{
+                    border-radius: 2rem;
+                    background-color: rgb(255, 111, 0);
+                    color: #fff;
+                    font-size: 1.6rem;
+                    padding: .3em 1.5em;
+                }
+                
             }
         }
     }
@@ -70,7 +86,7 @@
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
-        background-color: rgba(22, 14, 14, 0.1);
+        background-color: rgb(255, 255, 255,.7);
         cursor: pointer;
         padding: 0 .5rem;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -78,7 +94,7 @@
 
         &:hover,
         &:focus{
-            background-color: rgba(182, 181, 181, 0.4);
+            background-color: rgba(224, 224, 224, 0.3);
         }
     }
 }

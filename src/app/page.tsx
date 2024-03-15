@@ -15,10 +15,10 @@ const Home = () => {
       <NavBar/>
       <Slider/>
       <Filter/>
-      <Corousel/>
+      <Corousel type="Top Rated"/>
       <CatGallery/>
       <CardList products={CardData} type="Featured"/>
-      {/* <CardList products={CardData} type="Top Sales"/> */}
+      <Corousel type="Most Popular"/>
       <Footer/>
     </div>
   )

@@ -3,7 +3,7 @@
 @import "../../styles/variables.scss";
 
 .container{
-    flex-direction: column;
+    // flex-direction: column;
     margin-top: 3rem;
     border-top: 1px solid rgb(187, 184, 184);
     .title{
@@ -11,6 +11,10 @@
         font-weight: 500;
         padding: 1rem;
     }
+    .box{
+        display: flex;
+    .left{
+        flex: 3;
 .wrapper{
     display: flex;
     height: 80vh;
@@ -61,29 +65,39 @@
                 object-fit: cover;
                 background-color: $color-bg-1;
             }
-            .catBtn{
+            .center{
                 position: absolute;
-                min-width: 100px;
-                background-color: #fff;
+                // background-color: #fff;
                 width: fit-content;
-                height: 50px;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
+                display: flex;
+                top: 50%;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%, -50%);
                 color: #000;
-                cursor: pointer;
-                text-transform: uppercase;
-                font-weight: 500;
+                display: none;
+                .catName{
+                    color: #fff;
+                    font-size: 3rem;
+                    font-weight: 500;
+                }
+
             }
 
             &:hover{
+                .center{
+                    display: block;
+                }
                 .overlay {
                 background-color: $color-overlay;
                 visibility: visible;
             }
         }
     }
+}
+}
+}
+.right{
+    flex: 1;
 }
 }

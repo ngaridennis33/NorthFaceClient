@@ -60,7 +60,11 @@ const DesktopFilter: React.FC<DesktopFilterProps> = ({ openDropDownHandler, open
           })}
         </ul>
       </div>
-      <div className={styles.right}>right</div>
+      <div className={styles.right}>
+        <div className={styles.wrapper}>
+          <button className={styles.borderbtn}>Sort by Relevence</button>
+        </div>
+      </div>
     </div>
   );
 };

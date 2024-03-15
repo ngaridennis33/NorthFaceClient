@@ -8,6 +8,7 @@ import React from 'react';
 import styles from "./page.module.scss";
 import Banner from '@/components/banner/Banner';
 import Filter from '@/components/filter/Filter';
+import Corousel from '@/components/corousel/Corousel2';
 
 const Category = () => {
   const params = useParams();
@@ -43,7 +44,8 @@ const Category = () => {
     return (
       <div className={styles.container}>
         <span className={styles.text}>No items found.</span>
-        <hr />
+        <Filter/>
+        <Corousel type={`Top products`} />
         <CardList products={CardData} type="Featured"/>
       </div>
     );
@@ -53,7 +55,7 @@ const Category = () => {
     <div className={styles.container}>
       <Banner/>
       <Filter/>
-      <hr />
+      <Corousel type={`Top rated in ${cat}`} />
       <CardList products={products} type={cat || 'All'}/>
     </div>
   );

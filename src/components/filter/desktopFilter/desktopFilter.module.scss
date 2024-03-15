@@ -1,8 +1,10 @@
 @import "../../../styles/responsive.scss";
+@import "../../../styles/button.scss";
 
 .box{
     margin-top: 20px;
     display: flex;
+    width: 100%;
     @include respond(laptop){
         display: none;
     }
@@ -35,5 +37,11 @@
 
     .right{
         flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        .wrapper{
+            display: flex;
+            border-radius: 20px;
+        }
     }
 }

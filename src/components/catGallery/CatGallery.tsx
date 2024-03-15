@@ -6,30 +6,38 @@ import Link from 'next/link';
 const CatGallery = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}> Categories</h1 >
+      <h1 className={styles.title}>Popular Categories</h1 >
+      <div className={styles.box}>
+      <div className={styles.left}>
       <div className={styles.wrapper}>
       <div className={styles.col}>
         <div className={styles.row}>
           <div className={styles.imgContainer}>
             <Image className={styles.img} src="/catkids.jpg" alt="" width={500} height={500}/>
             <div className={styles.overlay}></div>
-            <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            <div className={styles.center}><span className={styles.catName}>@Kids</span>
+              <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            </div>
           </div>
         </div>
         <div className={styles.row}>
           <div className={styles.imgContainer}>
-            <Image className={styles.img} src="/catkids.jpg" alt="" width={500} height={500}/>
+            <Image className={styles.img} src="/catbag.jpg" alt="" width={500} height={500}/>
             <div className={styles.overlay}></div>
-            <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            <div className={styles.center}><span className={styles.catName}>@bags</span>
+              <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            </div>
           </div>
         </div>
       </div>
       <div className={styles.col}>
         <div className={styles.row}>
           <div className={styles.imgContainer}>
-            <Image className={styles.img} src="/catwomen.jpg" alt="" width={500} height={500}/>
+            <Image className={styles.img} src="/blackFriday.jpg" alt="" width={500} height={500}/>
             <div className={styles.overlay}></div>
-            <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            <div className={styles.center}><span className={styles.catName}>@promotions</span>
+              <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            </div>
           </div>
         </div>
       </div>
@@ -40,16 +48,20 @@ const CatGallery = () => {
               <div className={styles.imgContainer}>
                 <Image className={styles.img} src="/catmen.jpg" alt="" width={500} height={500}/>
                 <div className={styles.overlay}></div>
-                <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+                <div className={styles.center}><span className={styles.catName}>@men</span>
+              <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            </div>
               </div>
             </div>
           </div>
           <div className={styles.col}>
             <div className={styles.row}>
               <div className={styles.imgContainer}>
-                <Image className={styles.img} src="/catbag.jpg" alt="" width={500} height={500}/>
+                <Image className={styles.img} src="/catwomenshoes.jpg" alt="" width={500} height={500}/>
                 <div className={styles.overlay}></div>
-                <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+                <div className={styles.center}><span className={styles.catName}>@shoes</span>
+              <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            </div>
               </div>
             </div>
           </div>
@@ -58,10 +70,17 @@ const CatGallery = () => {
           <div className={styles.imgContainer}>
             <Image className={styles.img} src="/banner.jpg" alt="" width={500} height={500}/>
             <div className={styles.overlay}></div>
-            <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            <div className={styles.center}><span className={styles.catName}>@women</span>
+              <button className={styles.catBtn}><Link href="/"> Sale </Link></button>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    </div>
+    <div className={styles.right}>
+      <span>right</span>
+    </div>
     </div>
     </div>
   );

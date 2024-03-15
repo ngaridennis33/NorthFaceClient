@@ -4,6 +4,7 @@
     padding: 1.6rem 4.0rem;
     cursor: pointer;
     border: none;
+    outline: none;
     color: $color-white;
     border-radius: 15px;
     width: fit-content;
@@ -39,4 +40,13 @@
 
 .catBtn{
     @extend .utilsBtn;
+    background-color: $color-white;
+    font-weight: bold;
+    color: $color-black
+}
+.borderbtn{
+    @extend .utilsBtn;
+    border: 1px solid grey;
+    color: $color-black;
+    justify-content: flex-end;
 }

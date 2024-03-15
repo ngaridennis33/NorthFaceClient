@@ -8,7 +8,11 @@ import { LeftIcon, RightIcon } from '../icons/Icons';
 import Link from 'next/link';
 import { MobileSwipper } from '../mobile-sipper/MobileSwiper';
 
-const Corousel = () => {
+interface CorouselProps{
+  type:string;
+}
+
+const Corousel = ({type}:CorouselProps) => {
   const listRef: RefObject<HTMLDivElement> = useRef(null);
   const [slideIndex, setSlideNumber] = useState(0);
   const [isMoved, setIsMoved] = useState(false);
@@ -52,7 +56,7 @@ const Corousel = () => {
     <MobileSwipper onSwipe={handleSwipe}>
     <div className={styles.container}>
       <div className={styles.title}>
-        <h1>Popular Items</h1>
+        <h1>{type}</h1>
       </div>
     <div className={styles.wrapper}>
     <div className={styles.handle} onClick={() => handleClick('left')} style={{left:".5rem", display:!isMoved ? "none": "block"}}>
@@ -62,7 +66,10 @@ const Corousel = () => {
       {CardData.map((items)=>(
         <Link href={`/${items.category}`} key = {items.id} className={styles.imgLink}>
           <Image className={styles.img} width={500} height={500} alt = ""src={items.img[0]} style={{background:items.color[0]}}/>
-          <div className={styles.bg} ><span>{items.category}</span></div>
+          <div className={styles.bg} >
+            <span className={styles.label}>{items.label}</span>
+            <span className={styles.price}>${items.currPrice}</span>
+            </div>
         </Link>
         ))}
       </div>

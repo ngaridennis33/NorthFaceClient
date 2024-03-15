@@ -1,7 +1,9 @@
 @import "../../styles/responsive.scss";
 
 .container{
-    margin: 100px 0 20px 0;
+    margin-top: 10rem;
+    padding-top: 5rem;
+    border-top: 1px solid rgb(187, 184, 184);
     .top{
         display: flex;
         gap: 50px;
