@@ -15,8 +15,6 @@
             .dropDown {
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
                 visibility: visible;
-                -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	            animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
                 }
             }
         }
@@ -49,16 +47,13 @@
             position: absolute;
             left: 0;
             top: 100%;
-            padding: 20px;
+            padding: 2rem;
             z-index: 999;
             width: 100%;
             height:40vh;
             background-color: #fff;
             display: flex;
-            // align-items: center;
-            // justify-content: center;
             visibility: hidden;
-            // background-color: rgb(241, 241, 241);
 
             }
 
@@ -82,7 +77,7 @@
 
                 .imgText{
                     color: #fff;
-                    padding: 10px;
+                    padding: 1rem;
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -133,20 +128,3 @@
             }
         }
 }
-
-@-webkit-keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
