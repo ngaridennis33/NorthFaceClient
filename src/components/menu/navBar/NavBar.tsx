@@ -57,6 +57,7 @@ const NavBar = () => {
   // Handle hamburger Open and close
   const [navbarOpen, setNavbarOpen] = useState(false);
   const toogleHamburgerIcon = () => setNavbarOpen(!navbarOpen);
+  const mobileMenu = `${styles.mobileLinks} ${navbarOpen ? styles.mobileLinksShow : ""}`;
 
   // Handle search Open and close
   const [searchOpen, setSearchOpen] = useState(false);
@@ -124,12 +125,12 @@ const NavBar = () => {
             </div>
 
             {/* MobileNav Links */}
-            {navbarOpen && (
-              <div className={styles.mobileLinks}>
+            {/* {navbarOpen && ( */}
+              <div className={mobileMenu}>
                 <Mobile handleHamburgerClose={toogleHamburgerIcon} />
                 <TopNav />
               </div>
-            )}
+            {/* )} */}
           </div>
         </div>
       </div>

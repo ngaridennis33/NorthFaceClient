@@ -80,12 +80,16 @@
                     background-color: #fff;
                     left: 0;
                     top: 10rem;
-                    max-height: calc(100dvh - 10rem); /* Adjust the value accordingly */
+                    max-height: calc(100dvh - 10rem);
                     width: 100%;
                     overflow-y: auto;
-                    transition: .15s ease-in;
-                    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                    animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    transform: translateY(-200%);
+                    transition: all 500ms ease-in-out;
+                    opacity: 0;
+                }
+                .mobileLinksShow{
+                    opacity: 1;
+                    transform: translateY(0%);
                 }
 
             }
@@ -94,28 +98,3 @@
         
     }
 }
-
-@-webkit-keyframes slide-in-top {
-    0% {
-      -webkit-transform: translateY(-1000px);
-              transform: translateY(-1000px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes slide-in-top {
-    0% {
-      -webkit-transform: translateY(-1000px);
-              transform: translateY(-1000px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
-    }
-  }
