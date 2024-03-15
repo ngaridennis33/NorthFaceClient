@@ -7,47 +7,41 @@ import { MenuClose, OpenDropdown } from "@/components/menu/navBar/mobileNav/hamb
 interface Props {
     openDropDownHandler: (label: string) => void;
     openDropDown: string | null;
-    openFilterSlider: boolean;
+    // openFilterSlider: boolean;
     toogleFilterSlider: () => void;
 }
 
-const MobileFilter: FC<Props> = ({ openDropDownHandler, openDropDown, openFilterSlider, toogleFilterSlider }) => {
-    const container = `${styles.container} ${openFilterSlider ? styles.showMenu : ""}`;
+const MobileFilter: FC<Props> = ({ openDropDownHandler, openDropDown, toogleFilterSlider }) => {
+    // const container = `${styles.container} ${openFilterSlider ? styles.showMenu : ""}`;
 
     return (
-        <div className={container}>
+        <div className={styles.container}>
+            <div className={styles.wrapper}>
             <div className={styles.header}>
-                <span className={styles.title}>Sales</span>
+                <span className={styles.title}>Filter Items</span>
                 <div onClick={toogleFilterSlider}>
                     <MenuClose />
                 </div>
             </div>
-
-            <div className={styles.top}>
-                <button style={{padding:"5px 20px"}} className={styles.actionBtn}>Clear All</button>
-                <button style={{padding:"5px 20px"}} className={styles.ctaBtn}>Apply</button>
-            </div>
-
-            <ul className={styles.filterItems}>
                 {filterData.map(({ label, tree }: FilterItem, index: number) => {
                     const isopen = openDropDown === label;
 
                     return (
                         <div className={styles.filterItemsContainer} key={index}>
                             <div className={styles.items} onClick={() => openDropDownHandler(label)}>
-                                <li>{label}</li>
+                                <div>{label}</div>
                                 <OpenDropdown />
                             </div>
                             {isopen && <MobileFilterDropdown tree={tree} />}
                         </div>
                     );
                 })}
-            </ul>
+            </div>
 
-            {/* <div className={styles.bottom}>
+            <div className={styles.bottom}>
                 <button className={styles.actionBtn}>Clear All</button>
                 <button className={styles.ctaBtn}>Apply</button>
-            </div> */}
+            </div>
         </div>
     );
 };
