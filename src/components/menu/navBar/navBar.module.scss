@@ -23,6 +23,7 @@
         align-items: center;
         justify-content: center;
         font-family:helvetica-neue-lt, sans-serif;
+        position: relative;
 
         @include respond(laptop){
                 height: 10rem;
@@ -33,7 +34,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
 
             @include respond(laptop){
                 display: none;

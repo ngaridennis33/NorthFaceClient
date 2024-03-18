@@ -44,19 +44,81 @@ export const TopNavData = [
 // NavLinks for the NavBar
 export const NavBarData = [
     {
-    label:"Black Friday Sale", 
+    label:"Shop-Sale", 
     link:"/black-friday-sale", 
     img:"/blackFriday.jpg",
     tree:[
         {
             label:"Shop Sale",
-            link:"/shop-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Women's Sale",
-            link:"/women's-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Men's Sale",
@@ -75,8 +137,39 @@ export const NavBarData = [
         },
         {
             label:"Women's Footwear Sale",
-            link:"/women-footwear-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Men's Footwear Sale",
@@ -98,13 +191,75 @@ export const NavBarData = [
     tree:[
         {
             label:"Shop All",
-            link:"/mens",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Sale",
-            link:"/mens-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Featured",
@@ -149,38 +304,255 @@ export const NavBarData = [
         },
         {
             label:"Jackets & Vests",
-            link:"/bags-and-gear-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Fleece",
-            link:"women-footwear-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Tops",
-            link:"/men-footwear-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Bottoms",
-            link:"/shop-all-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Footwear",
-            link:"/shop-all-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Accessories",
-            link:"/shop-all-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         },
         {
             label:"Collections",
-            link:"/shop-all-sale",
-            branches:null,
+            link:null,
+            branches:[
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Best Sellers",
+                    link:"/mens-best-sellers",
+                    branches:null
+                },
+                {
+                    label:"New Arrivals",
+                    link:"/mens-new-arrivals",
+                    branches:null
+                },
+                {
+                    label:"Big Sizes",
+                    link:"/mens-big-sizes",
+                    branches:null
+                },
+                {
+                    label:"Gift Guide",
+                    link:"/gift-guide",
+                    branches:null
+                },
+                {
+                    label:"Freeride ",
+                    link:"/freeride",
+                    branches:null
+                }
+            ],
         }
         
         ]

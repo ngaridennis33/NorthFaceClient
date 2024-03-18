@@ -12,7 +12,7 @@ const DesktopLinks = () => {
       <Link href={link} className={styles.navListItemLink}>{label}</Link>
       {tree && (
           <div className={styles.dropDown}>
-          <ul className={styles.dropdownList}>
+          <ul className={styles.dropdownList} style={{flexDirection:img ? "row": "column", height:img ? "fit-content": "40vh"}} >
               {tree.map(({ label, branches, link }, index) => (
               <li className={styles.dropDownListItems} key={index}>
                   {link && <Link href={link}>{label}</Link>}
@@ -34,7 +34,7 @@ const DesktopLinks = () => {
               <div className={styles.imageContainer}>
                 <Image className={styles.image} fill src={img} alt=""/> 
                 <span className={styles.imgText}>{label}<br/>$40% OFF</span>
-                </div>
+              </div>
                 }
           
           </div>
