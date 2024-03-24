@@ -99,7 +99,6 @@ export const CardData: Item[] = [
             "#635BFF",
             "#999",
             "#e4e4",
-            "#80e3"
         ]
     },
     {

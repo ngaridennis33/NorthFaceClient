@@ -8,6 +8,7 @@ const Search = () => {
                 </svg>
                 <input className={styles.input} placeholder="Search..." required type="text" autoFocus/>
                 <span className={styles.inputBorder}></span>
+                <div className={styles.bg}></div>
     </form>
   )
 }

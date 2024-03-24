@@ -63,8 +63,8 @@ const Card: React.FC<CardProps> = ({ items }) => {
                 </div>
                 <div className={styles.bottom}>
                     <div className={styles.price}>
-                        <span className={styles.currentPrice}> $ {items.currPrice}</span>
-                        <span className={styles.prevPrice}> $ {items.prevPrice}</span>
+                        <span className={styles.currentPrice}>${items.currPrice}</span>
+                        <span className={styles.prevPrice}>${items.prevPrice}</span>
                     </div>
                     <CartIcon />
                 </div>
