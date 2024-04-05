@@ -34,10 +34,6 @@ export const TopNavData = [
         label: "Help",
         link: "/help",
     },
-    {
-        label: "Sign In",
-        link: "/login",
-    },
 ];
 
 

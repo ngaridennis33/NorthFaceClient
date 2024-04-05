@@ -1,3 +1,4 @@
+import Auth from "@/components/authbtn/Auth"
 import { TopNavData } from "../navData"
 import styles from "./topNav.module.scss"
 import Link from "next/link"
@@ -10,9 +11,10 @@ const TopNav = () => {
             <ul className={styles.list}>
                 {TopNavData.map((item, index)=>(
                   <Link href={item.link} key={index} className={styles.listItem}>{item.label} 
-                  {index !== TopNavData.length - 1 && <hr className={styles.hr} />}
+                   <hr className={styles.hr}/>
                   </Link>
                 ))}
+            <Auth/>
             </ul>
         </div>
     </div>

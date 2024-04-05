@@ -1,27 +1,35 @@
 @import "./variables.scss";
+@import "./responsive.scss";
 
 .utilsBtn{
-    padding: 1.6rem 4.0rem;
     cursor: pointer;
     border: none;
     outline: none;
     color: $color-white;
-    border-radius: 15px;
     width: fit-content;
-    // min-width: 100px;
+}
+
+.ctaBtn{
+    // Login, Register, Resetpassword 
+    @extend .utilsBtn;
+    padding: 1.6rem 4.0rem;
+    background-color: $color-black;
+    border-radius: 15px;
     font-size: 1.4rem;
+    font-weight: bold;
     transition: .3s ease;
     &:disabled{
-        opacity: .8;
         cursor: not-allowed;
+        background-color: $color-grey
     }
-    
-&:hover{
+
+    &:hover{
         transform: scale(.98);  
     }
 }
 
-.ctaBtn{
+.ctaBtnTransparent{
+    // Social-Media AUth
     @extend .utilsBtn;
     background-color: $color-black;
     font-weight: bold;
@@ -31,6 +39,7 @@
 }
 
 .actionBtn{
+    // ApplyFilter
     @extend .utilsBtn;
     background-color: transparent;
     color: #000;
@@ -38,12 +47,34 @@
     border: .1rem solid grey;
 }
 
+.actionBtnTransparent{
+    // NavBar Sign-In and Sign-Out Btns.
+    @extend .utilsBtn;
+    color: $color-black;
+    font-size: 1.4rem;
+    font-weight: 300;
+    @include respond(laptop){
+        font-size: 1.8rem;
+    }
+}
+
+.actionBtnTransparentWithBorder{
+    // CancelFilter
+    @extend .actionBtn;
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+    border: .1rem solid grey;
+}
+
+
 .catBtn{
     @extend .utilsBtn;
     background-color: $color-white;
     font-weight: bold;
     color: $color-black
 }
+
 .borderbtn{
     @extend .utilsBtn;
     border: 1px solid grey;
