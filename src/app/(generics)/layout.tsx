@@ -1,8 +1,8 @@
 // import Logo from "@/components/menu/logo/Logo"
-import TopNav from "@/components/menu/topnav/TopNav"
+import TopNav from "@/components/menu/headerNav/HeaderNav"
 import styles from "./layout.module.scss"
 import { ReactNode } from "react"
-import NavBar from "@/components/menu/navBar/NavBar"
+import NavBar from "@/components/menu/primaryNav/PrimaryNav"
 
 const Layout = ({children}:{children:ReactNode}) => {
     return (

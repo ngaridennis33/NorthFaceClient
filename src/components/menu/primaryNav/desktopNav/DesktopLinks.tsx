@@ -35,7 +35,7 @@ const DesktopLinks = () => {
                 <Image className={styles.image} fill src={img} alt=""/> 
                 <span className={styles.imgText}>{label}<br/>$40% OFF</span>
               </div>
-                }
+              }
           
           </div>
       )}

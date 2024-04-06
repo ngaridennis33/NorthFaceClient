@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const CatGallery = () => {
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1 >

@@ -1,17 +1,11 @@
-"use client" 
-import React, { useState } from 'react'
+import React from 'react'
 import styles from "./page.module.scss";
 import Image from 'next/image'
 import Link from 'next/link'
+import { login } from '../../../../utils/actions';
 
-const SignIn = () => {
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  }
+const SignIn = async () => {
 
   return (
     <div className={styles.container}>
@@ -20,10 +14,10 @@ const SignIn = () => {
         <h3 className='text-heading'>Welcome to Northface</h3>
       </div>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className={styles.form} action={login}>
         {/* Email Container */}
         <div className={styles.inputCont}>
-        <input className={styles.input} placeholder=" " required value={email} onChange={(e) => setEmail(e.target.value)}type="email" />
+        <input className={styles.input} placeholder=" " required name="email" type="email" />
           <label htmlFor="input"  className={styles.inputLabel}>
             <span className={styles.inputLabelName}>Email Address</span>
           </label>
@@ -31,8 +25,7 @@ const SignIn = () => {
 
         {/* Password Container */}
         <div className={styles.inputCont}>
-        <input className={styles.input} placeholder=" " type="password" required value={password}
-            onChange={(e) => setPassword(e.target.value)}/>
+        <input className={styles.input} placeholder=" " type="password" required name="password"/>
           <label htmlFor="input" className={styles.inputLabel}>
             <span className={styles.inputLabelName}>Password</span>
           </label>
@@ -48,7 +41,7 @@ const SignIn = () => {
 
         <Link className="text-link" href="forgotpassword" ><span className={styles.text}> Forgot Password? </span></Link>
         </div>
-            <button style={{width:"100%"}}  className={styles.ctaBtn} type="submit">Login</button>
+            <button style={{width:"100%"}}  className={styles.ctaBtn}>Login</button>
       </form>
 
 {/* Or Container */}

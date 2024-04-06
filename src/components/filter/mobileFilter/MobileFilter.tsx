@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { FilterItem, filterData } from "../filterData";
 import MobileFilterDropdown from "./dropdown/MobileFilterDropdown";
 import styles from "./mobilefilter.module.scss";
-import { MenuClose, OpenDropdown } from "@/components/menu/navBar/mobileNav/hamburger/Hamburger";
+import { MenuClose, OpenDropdown } from "@/components/menu/primaryNav/mobileNav/hamburger/Hamburger";
 
 interface Props {
     openDropDownHandler: (label: string) => void;

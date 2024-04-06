@@ -2,7 +2,7 @@
 
 import React, { createContext, useEffect, useState, ReactNode } from 'react';
 
-interface ModalContextProps {
+type ModalContextProps = {
   isModalOpen: boolean;
   domNodeClick: () => void;
   modalContent: ReactNode | null;
@@ -10,7 +10,17 @@ interface ModalContextProps {
   closeModal: () => void;
 }
 
-export const ModalContext = createContext<ModalContextProps | undefined>(undefined);
+// Define default values for the context properties
+const defaultContext: ModalContextProps = {
+  isModalOpen: false,
+  domNodeClick: () => {},
+  modalContent: null,
+  openModal: () => {},
+  closeModal: () => {},
+};
+
+
+export const ModalContext = createContext<ModalContextProps>(defaultContext);
 
 export const ModalProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

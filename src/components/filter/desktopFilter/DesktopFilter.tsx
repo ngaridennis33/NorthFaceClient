@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./desktopFilter.module.scss";
 import Dropdown from "./dropdown/Dropdown";
 import { filterData } from "../filterData";
-import { OpenDropdown } from "@/components/menu/navBar/mobileNav/hamburger/Hamburger";
+import { OpenDropdown } from "@/components/menu/primaryNav/mobileNav/hamburger/Hamburger";
 
 interface FilterItem {
   label: string;

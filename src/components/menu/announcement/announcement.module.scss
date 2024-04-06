@@ -1,10 +1,14 @@
-@import "../../styles/responsive.scss";
+@import "../../../styles/responsive.scss";
+
 .container{
     background: black;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    &.showAnnouncement {
+        display: none;
+    }
 
     .wrapper{
         width: 80%;
@@ -24,7 +28,6 @@
         }
 
         .close{
-            width: 2%;
             display: flex;
             align-items: center;
             justify-content: center;

@@ -6,9 +6,10 @@ import { ModalContext } from "../context/ModalContext";
 
 interface ModalProps {
   children: React.ReactNode;
+  isModalOpen: boolean;
 }
 
-const Modal: React.FC<ModalProps> = ({ children }) => {
+const Modal = ({ children }:ModalProps) => {
   const modalContext = useContext(ModalContext);
 
   if (!modalContext) {
