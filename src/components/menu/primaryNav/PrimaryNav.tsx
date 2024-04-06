@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { CartIcon } from '@/components/icons/Icons';
 import Logo from '@/components/logo/Logo';
 import DesktopLinks from './desktopNav/DesktopLinks';
@@ -10,23 +10,8 @@ import { MenuClose, MenuOpen, SearchIcon } from './mobileNav/hamburger/Hamburger
 import Search from '../../search/Search';
 import styles from './primaryNav.module.scss';
 
+
 const PrimaryNav = () => {
-  // Show box shadow on scroll
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const threshold = 10; // Change this value to set your scroll threshold
-      const isPastThreshold = window.scrollY > threshold;
-      setIsVisible(!isPastThreshold);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   // Handle hamburger Open and close
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -38,7 +23,8 @@ const PrimaryNav = () => {
   const toggleSearchIcon = () => setSearchOpen(!searchOpen);
 
   return (
-    <div className={`${styles.container} ${!isVisible ? styles.invinsible : ''}`}>
+    <div className={styles.container}>
+
       {/* Desktop View */}
       <div className={styles.deskTopwrapper}>
         {/* Logo Section */}

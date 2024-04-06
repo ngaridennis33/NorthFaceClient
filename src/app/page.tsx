@@ -1,4 +1,3 @@
-import Accordion from "@/components/accordion/Accordion";
 import CardList from "@/components/cardList/CardList";
 import { CardData } from "@/components/cardList/cardData";
 import CatGallery from "@/components/catGallery/CatGallery";
