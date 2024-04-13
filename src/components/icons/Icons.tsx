@@ -45,3 +45,29 @@ export const XIcon = () => {
     </div>
   )
 }
+
+export const SuccessIcon = () => {
+  return (
+    <div className={styles.containersm}>
+       <svg className={styles.successIcon} viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" strokeWidth="2" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round"><path className={styles.circle} d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z"/><path className={styles.tick} d="M6.5 13.5L10 17l8.808621-8.308621"/></g></svg>
+    </div>
+  )
+}
+
+export const WarningIcon = () => {
+  return (
+    <div className={styles.containersm}>
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path fill='currentColor' d="m16 2a14 14 0 1 0 14 14 14 14 0 0 0 -14-14zm0 26a12 12 0 1 1 12-12 12 12 0 0 1 -12 12z"/><path fill='currentColor' d="m15 8h2v11h-2z"/><path fill='currentColor' d="m16 22a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0 -1.5-1.5z"/><path d="m0 0h32v32h-32z" fill="none"/></svg>
+    </div>
+  )
+}
+
+
+export const RedirectIcon = () => {
+  return (
+    <div className={styles.containersm}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="currentColor" d="M30.586 21.414L39.171 30H16v4h23.171l-8.585 8.586 2.828 2.828L46.829 32 33.414 18.586z"/><path  d="M32 4C16.537 4 4 16.537 4 32s12.537 28 28 28 28-12.537 28-28S47.463 4 32 4zm0 54C17.664 58 6 46.336 6 32S17.664 6 32 6s26 11.664 26 26-11.664 26-26 26z"/></svg>
+    </div>
+  )
+}
+

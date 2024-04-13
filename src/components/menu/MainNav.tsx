@@ -11,18 +11,18 @@ const MainNav =  () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const threshold =10; // Change this value to set your scroll threshold
+      const threshold = 200; // Increased scroll threshold value
       const isPastThreshold = window.scrollY > threshold;
       setIsVisible(!isPastThreshold);
     };
-
+  
     window.addEventListener('scroll', handleScroll);
-
+  
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-
   }, []);
+
   return (
     <nav className={styles.container}>
 

@@ -159,3 +159,27 @@
         opacity: 1;
     }
     }
+
+/**
+* ----------------------------------------
+* animation Notification
+* ----------------------------------------
+*/
+
+@keyframes fade-in {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    95% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes progress {
+    to {
+        transform: scaleX(1);
+    }
+}

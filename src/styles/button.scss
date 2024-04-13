@@ -18,9 +18,12 @@
     font-size: 1.4rem;
     font-weight: bold;
     transition: .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:disabled{
         cursor: not-allowed;
-        background-color: $color-grey
+        opacity: .8;
     }
 
     &:hover{

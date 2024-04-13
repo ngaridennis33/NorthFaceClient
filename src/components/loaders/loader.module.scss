@@ -1,0 +1,85 @@
+@import "../../styles/variables.scss";
+
+  .loading {
+    --speed-of-animation: 0.9s;
+    --gap: 6px;
+    --first-color: #F63455;
+    --second-color: #FC5823;
+    --third-color: #F86026;
+    --fourth-color: #D53DB2;
+    --fifth-color: #F4CE12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    gap: 6px;
+    height: 100px;
+   }
+   
+   .loading span {
+    width: 4px;
+    height: 50px;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+   }
+   
+   .loading span:nth-child(2) {
+    background: var(--second-color);
+    animation-delay: -0.8s;
+   }
+   
+   .loading span:nth-child(3) {
+    background: var(--third-color);
+    animation-delay: -0.7s;
+   }
+   
+   .loading span:nth-child(4) {
+    background: var(--fourth-color);
+    animation-delay: -0.6s;
+   }
+   
+   .loading span:nth-child(5) {
+    background: var(--fifth-color);
+    animation-delay: -0.5s;
+   }
+   
+   @keyframes scale {
+    0%, 40%, 100% {
+     transform: scaleY(0.05);
+    }
+   
+    20% {
+     transform: scaleY(1);
+    }
+   }
+
+.progressBar {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    .circle {
+        height: 100%;
+        right: 0px;
+        position: absolute;
+        border: solid 5px $color-grey-dark;
+        border-top-color: $color-grey;
+        border-radius: 50%;
+    }
+    .border {
+        width: 100%;
+        transform: rotate(135deg);  
+        animation: spin 1.3s steps(2) .2s infinite;
+        -webkit-animation: spin 1.3s linear infinite;
+    }
+
+}
+
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
