@@ -4,6 +4,8 @@ import styles from "./page.module.scss";
 import FormInput from '@/components/RegisterFormInput/FormInput';
 import Image from 'next/image';
 import Link from 'next/link';
+import { registerNewUser } from "../../../../utils/actions";
+
 
 interface FormInputValues{
   name:string;
@@ -21,8 +23,10 @@ const Register = () => {
     confirmPassword: "",
   });
 
-  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+      const res = await registerNewUser({data:values});
+      console.log(res?.data)
   }
 
   const onChange = (e:React.ChangeEvent<HTMLInputElement>)=>{
@@ -54,8 +58,8 @@ const Register = () => {
         // errorMessage:"⁕ Password should be between 8-20 characters. MUST include 1 uppercase and lowe case letter, 1 digit and 1 special character! (eg. asdASD123*)",
         erorrMessage:"The password must contain at least 8-20 characters of the following combinations:digit, uppercase letter, lowercase letter and special characters",
         label:"Password",
-        // pattern: "^.{8,20}$",
-        pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[`~!@#$%^&*()\\-_+=|\\[\\]{};:'\"<,.>/\\?]).{8,20}$",
+        pattern: "^.{8,20}$",
+        // pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[`~!@#$%^&*()\\-_+=|\\[\\]{};:'\"<,.>/\\?]).{8,20}$",
         required:true,
     },
     {

@@ -2,12 +2,24 @@ import axios from "axios";
 
 const baseUrl = "http://localhost:8000/api"
 
-export const authUrl = {
-    register:baseUrl +"/auth"+"/register",
-    login:baseUrl +"/auth"+"/login"
-}
+export const registerUser = axios.create({
+    baseURL: baseUrl,
+});
 
-export const newRequest = axios.create({
-    baseURL:"http://localhost:8000/api",
+export const loginRequest = axios.create({
+    baseURL:baseUrl,
     withCredentials:true,
 })
+
+
+export const getUserSession = axios.create({
+    baseURL: baseUrl,
+    withCredentials: true,
+});
+
+
+export const logoutUserSession = axios.create({
+    baseURL: baseUrl,
+    withCredentials: true,
+});
+

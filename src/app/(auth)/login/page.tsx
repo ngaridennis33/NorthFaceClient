@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import styles from "./page.module.scss";
 import Image from 'next/image'
 import Link from 'next/link'
-import { newRequest } from '../../../../utils/network';
+import { loginRequest } from '../../../../utils/network';
 import Notification from '@/components/notification/Notification';
 import { SpinnerLoader } from '@/components/loaders/Loaders';
 import { useRouter } from 'next/navigation';
@@ -24,7 +24,7 @@ const SignIn = () => {
     setStatus(null); 
     setIsLoading(true);
     try {
-      const res = await newRequest.post("/auth/login",{email,password});
+      const res = await loginRequest.post("/auth/login",{email,password});
       console.log("res",res)
       router.push("/")
       setIsLoading(false)
