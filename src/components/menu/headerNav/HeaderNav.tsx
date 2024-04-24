@@ -15,7 +15,6 @@ const HeaderNav = () => {
     };
     getUserSession();
   }, [user]);
-  console.log(user)
 
   return (
       <div className={styles.container}>

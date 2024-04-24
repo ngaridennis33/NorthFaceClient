@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useForm } from 'react-hook-form';
 import styles from "./page.module.scss";
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,37 +9,27 @@ import { loginRequest } from '../../../../utils/network';
 import Notification from '@/components/notification/Notification';
 import { SpinnerLoader } from '@/components/loaders/Loaders';
 import { useRouter } from 'next/navigation';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { loginUserSchema, TLoginUserInput } from '@/lib/types';
 
 
 const SignIn = () => {
   const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
-  const [status, setStatus] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: {errors, isSubmitting},
+    reset,
+  } = useForm<TLoginUserInput>({
+    resolver: zodResolver(loginUserSchema)
+  });
 
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
-    e.preventDefault();
-    setError(null);
-    setStatus(null); 
-    setIsLoading(true);
-    try {
-      const res = await loginRequest.post("/auth/login",{email,password});
-      console.log("res",res)
-      router.push("/")
-      setIsLoading(false)
-    
-        
-    } catch (err:any) {
-      setError(err.response.data.errorMessage);
-      setStatus(err.response.data.status)
-      setIsLoading(false);
-    }
-};
+  const onSubmit = async (data: TLoginUserInput) => {
+      await new Promise((resolve)=> setTimeout(resolve,1000));
+      reset();
+  }
+
  
-console.log(status, error)
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -46,22 +37,42 @@ console.log(status, error)
         <h3 className='text-heading'>Welcome to Northface</h3>
       </div>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit)} >
         {/* Email Container */}
         <div className={styles.inputCont}>
-        <input className={`${styles.input} ${error && styles.errorInput}`} placeholder=" " required name="email" type="email" onChange={(e) => setEmail(e.target.value)} />
+          <input 
+              {...register("email")}
+              type="email"
+              placeholder=" "
+              className={styles.input}
+          />
           <label htmlFor="input"  className={styles.inputLabel}>
             <span className={styles.inputLabelName}>Email Address</span>
           </label>
         </div>
+        {errors.email && (
+          <span className={styles.error}> 
+            {`${errors.email.message}`} 
+          </span>
+        )}
 
         {/* Password Container */}
         <div className={styles.inputCont}>
-        <input className={`${styles.input} ${error && styles.errorInput}`} placeholder=" " type="password" required name="password" onChange={(e) =>setPassword(e.target.value)}/>
+        <input 
+               {...register("password")}
+              type="password"
+              placeholder=" "
+              className={styles.input}
+          />
           <label htmlFor="input" className={styles.inputLabel}>
             <span className={styles.inputLabelName}>Password</span>
           </label>
         </div>
+        {errors.password && (
+          <span className={styles.error}> 
+            {`${errors.password.message}`} 
+          </span>
+        )}
         
         <div className={styles.action}>
         <div className={styles.checkbox}>
@@ -73,8 +84,8 @@ console.log(status, error)
 
         <Link className="text-link" href="forgotpassword" ><span className={styles.text}> Forgot Password? </span></Link>
         </div>
-            <button style={{width:"100%"}} disabled={isLoading} className={styles.ctaBtn} type="submit">{isLoading ? <SpinnerLoader/>: "Login"}</button>
-            {status && <Notification status={status} desc={error}/>}
+            <button style={{width:"100%"}} disabled={isSubmitting} className={styles.ctaBtn} type="submit">{isSubmitting ? <SpinnerLoader/>: "Login"}</button>
+            {/* {errors && <Notification status={"error"} desc={"error happened"}/>} */}
       </form>
 
 {/* Or Container */}
