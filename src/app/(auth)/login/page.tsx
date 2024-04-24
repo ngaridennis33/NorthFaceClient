@@ -14,20 +14,22 @@ import { loginUserSchema, TLoginUserInput } from '@/lib/types';
 
 
 const SignIn = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const {
     register,
     handleSubmit,
-    formState: {errors, isSubmitting},
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<TLoginUserInput>({
     resolver: zodResolver(loginUserSchema)
   });
 
   const onSubmit = async (data: TLoginUserInput) => {
+    console.log("clicked")
       await new Promise((resolve)=> setTimeout(resolve,1000));
+      
       reset();
-  }
+  };
 
  
   return (
@@ -84,7 +86,14 @@ const SignIn = () => {
 
         <Link className="text-link" href="forgotpassword" ><span className={styles.text}> Forgot Password? </span></Link>
         </div>
-            <button style={{width:"100%"}} disabled={isSubmitting} className={styles.ctaBtn} type="submit">{isSubmitting ? <SpinnerLoader/>: "Login"}</button>
+            <button
+              style={{ width: "100%" }}
+              disabled={isSubmitting}
+              className={styles.ctaBtn}
+              type="submit" // Make sure this attribute is included
+            >
+              {isSubmitting ? <SpinnerLoader /> : "Login"}
+            </button>
             {/* {errors && <Notification status={"error"} desc={"error happened"}/>} */}
       </form>
 
